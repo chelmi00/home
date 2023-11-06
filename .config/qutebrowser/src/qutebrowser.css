@@ -1,0 +1,54 @@
+/* Estilo oscuro básico */
+body {
+    background-color: #000000;
+    color: #f8f8f2;
+}
+
+a {
+    color: #335bd1;
+}
+
+/* Estilo para bloques de código */
+pre, code {
+    background-color: #000000;
+    color: #f8f8f2;
+    padding: 10px;
+    border-radius: 5px;
+    overflow: auto;
+}
+
+/* Estilo para enlaces visitados */
+a:visited {
+    color: #bd93f9;
+}
+
+/* Estilo para enlaces cuando el cursor está sobre ellos */
+a:hover {
+    color: #50fa7b;
+}
+
+/* Estilo para encabezados */
+h1, h2, h3, h4, h5, h6 {
+    color: #ff79c6;
+}
+
+/* Estilo para listas no ordenadas */
+ul {
+    list-style-type: square;
+}
+
+/* Estilo para citas */
+blockquote {
+    border-left: 2px solid #6272a4;
+    margin-left: 10px;
+    padding-left: 10px;
+}
+
+/* Estilo para tablas */
+table {
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #44475a;
+}
