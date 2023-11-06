@@ -32,6 +32,9 @@ colors() {
 }
 
 [ -r /usr/share/bash-completion/bash_completion ] && . /usr/share/bash-completion/bash_completion
+if [ -f ~/.bash_aliases ]; then
+    source ~/.bash_aliases
+fi
 
 # Change the window title of X terminals
 case ${TERM} in
@@ -46,10 +49,8 @@ esac
 use_color=true
 
 # Set colorful PS1 only on colorful terminals.
-# dircolors --print-database uses its own built-in database
-# instead of using /etc/DIR_COLORS.  Try to use the external file
-# first to take advantage of user additions.  Use internal bash
-# globbing instead of external grep binary.
+# dircolors --print-database uses its own built-in database instead of using /etc/DIR_COLORS.  Try to use the external file first to take advantage of user additions.  Use internal bash globbing instead of external grep binary.
+# \u user; \h pc name; \W workspace; \$ dollar sign; \[\e[38;2;R;G;Bm\] defines color (it can be decimal (255) or hexadecimal (0xff), \[\e[0m\] outputs white)
 safe_term=${TERM//[^[:alnum:]]/?}   # sanitize TERM
 match_lhs=""
 [[ -f ~/.dir_colors   ]] && match_lhs="${match_lhs}$(<~/.dir_colors)"
@@ -72,13 +73,11 @@ if ${use_color} ; then
 	if [[ ${EUID} == 0 ]] ; then
 		PS1='\[\033[01;31m\][\h\[\033[01;36m\] \W\[\033[01;31m\]]\$\[\033[00m\] '
 	else
-		PS1='\[\033[01;32m\][\u@\h\[\033[01;37m\] \W\[\033[01;32m\]]\$\[\033[00m\] '
+		# manjaro PS1='\[\033[01;32m\][\u@\h\[\033[01;37m\] \W\[\033[01;32m\]]\$\[\033[00m\] '
+		# mine PS1='\[\e[38;2;27;159;198m\]\u@\h \[\e[38;2;160;160;220m\]\w\[\e[38;2;255;255;255m\]\$\[\e[0m\] '
+		PS1='\[\033[01;34m\]\u@\h\[\033[01;36m\] \W\[\033[0;1m\]\$\[\033[32;0m\] '
 	fi
 
-	alias ls='ls --color=auto'
-	alias grep='grep --colour=auto'
-	alias egrep='egrep --colour=auto'
-	alias fgrep='fgrep --colour=auto'
 else
 	if [[ ${EUID} == 0 ]] ; then
 		# show root@ when we don't have colors
@@ -89,12 +88,6 @@ else
 fi
 
 unset use_color safe_term match_lhs sh
-
-#alias cp="cp -i"                          # confirm before overwriting something
-#alias df='df -h'                          # human-readable sizes
-#alias free='free -m'                      # show sizes in MB
-#alias np='nano -w PKGBUILD'
-#alias more=less
 
 xhost +local:root > /dev/null 2>&1
 
@@ -135,3 +128,14 @@ ex ()
     echo "'$1' is not a valid file"
   fi
 }
+
+
+# # Environment Variables
+# export GTK_THEME=Breeze-Dark
+# export QT_QPA_PLATFORMTHEME=qt5ct
+# export TERM=xterm-256color
+# export LANG=en_US.UTF-8
+#
+# # Bitwarden Data
+# export BW_CLIENTID="user.5474947a-59d6-4b15-b406-b046009041c5"
+# export BW_CLIENTSECRET="OJrFFCTLxxe7NF6oDs91ki66qacFO9"
