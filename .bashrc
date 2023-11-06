@@ -50,7 +50,8 @@ use_color=true
 
 # Set colorful PS1 only on colorful terminals.
 # dircolors --print-database uses its own built-in database instead of using /etc/DIR_COLORS.  Try to use the external file first to take advantage of user additions.  Use internal bash globbing instead of external grep binary.
-# \u user; \h pc name; \W workspace; \$ dollar sign; \[\e[38;2;R;G;Bm\] defines color (it can be decimal (255) or hexadecimal (0xff), \[\e[0m\] outputs white)
+# \u user; \h pc name; \W and \w workspace; \$ dollar sign;
+# 256-color Mode: \e[38;2;r;g;bm - foreground; \e[48;2;r;g;bm - background
 safe_term=${TERM//[^[:alnum:]]/?}   # sanitize TERM
 match_lhs=""
 [[ -f ~/.dir_colors   ]] && match_lhs="${match_lhs}$(<~/.dir_colors)"
@@ -73,9 +74,11 @@ if ${use_color} ; then
 	if [[ ${EUID} == 0 ]] ; then
 		PS1='\[\033[01;31m\][\h\[\033[01;36m\] \W\[\033[01;31m\]]\$\[\033[00m\] '
 	else
-		# manjaro PS1='\[\033[01;32m\][\u@\h\[\033[01;37m\] \W\[\033[01;32m\]]\$\[\033[00m\] '
-		# mine PS1='\[\e[38;2;27;159;198m\]\u@\h \[\e[38;2;160;160;220m\]\w\[\e[38;2;255;255;255m\]\$\[\e[0m\] '
-		PS1='\[\033[01;34m\]\u@\h\[\033[01;36m\] \W\[\033[0;1m\]\$\[\033[32;0m\] '
+		pc_user='\[\e[38;2;27;161;136m\]' #1BA188
+		wd='\[\e[38;2;91;120;134m\]' #5B7886
+		dollar='\[\e[38;2;3;182;204m\]' #03B6CC
+		input='\[\e[38;2;255;255;255m\]' #FFFFFF
+		PS1="${pc_user}\u@\h ${wd}\w ${dollar}\$ ${input}"
 	fi
 
 else
@@ -91,22 +94,16 @@ unset use_color safe_term match_lhs sh
 
 xhost +local:root > /dev/null 2>&1
 
-# Bash won't get SIGWINCH if another process is in the foreground.
-# Enable checkwinsize so that bash will check the terminal size when
-# it regains control.  #65623
+# Bash won't get SIGWINCH if another process is in the foreground. Enable checkwinsize so that bash will check the terminal size when it regains control.  #65623
 # http://cnswww.cns.cwru.edu/~chet/bash/FAQ (E11)
 shopt -s checkwinsize
-
 shopt -s expand_aliases
-
-# export QT_SELECT=4
 
 # Enable history appending instead of overwriting.  #139609
 shopt -s histappend
 
-#
-# # ex - archive extractor
-# # usage: ex <file>
+# ex - archive extractor
+# usage: ex <file>
 ex ()
 {
   if [ -f $1 ] ; then
@@ -129,6 +126,7 @@ ex ()
   fi
 }
 
+# export QT_SELECT=4
 
 # # Environment Variables
 # export GTK_THEME=Breeze-Dark
