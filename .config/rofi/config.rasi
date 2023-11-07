@@ -1,0 +1,115 @@
+/**
+ * ROFI Color theme
+ * User: Qball
+ * Copyright: Dave Davenport
+ */
+
+* {
+    bg-color:                    #2f343fd9;
+    text-color:                  #1ba188ff;
+    inactive-text-color:         #777e8dff;
+    urgent-text-color:           #f0f8ffff;
+    highlight-text-color:        #ffffffff;
+    index-color:                 #80b000ff;
+    urgent-bg-color:             #e53935ff;
+    transparent:                 #00000000;
+}
+window {
+    width: 100%;
+    height: 100%;
+    padding: 40% 35% 40% 45%;
+    background-color: @bg-color;
+}
+mainbox {
+    border:  0;
+    padding: 0;
+}
+message {
+    border:       2px 0px 0px ;
+    border-color: @transparent;
+    padding:      1px ;
+}
+textbox {
+    text-color: @inactive-text-color;
+}
+listview {
+    fixed-height: 0;
+    border:       0;
+    border-color: @transparent;
+    spacing:      2% ;
+    scrollbar:    false;
+    padding:      2% 0px 0px ;
+}
+element {
+    border:  0;
+    padding: 1px ;
+}
+element-text {
+    background-color: inherit;
+    text-color:       inherit;
+}
+element.normal.normal {
+    background-color: @transparent;
+    text-color:       @inactive-text-color;
+}
+element.normal.urgent {
+    background-color: @transparent;
+    text-color:       @urgent-text-color;
+}
+element.normal.active {
+    background-color: @transparent;
+    text-color:       @index-color;
+}
+element.selected.normal {
+    background-color: @transparent;
+    text-color:       @text-color;
+}
+element.selected.urgent {
+    background-color: @urgent-bg-color;
+    text-color:       @text-color;
+}
+element.selected.active {
+    background-color: @index-color;
+    text-color:       @text-color;
+}
+element.alternate.normal {
+    background-color: @transparent;
+    text-color:       @inactive-text-color;
+}
+element.alternate.urgent {
+    background-color: @transparent;
+    text-color:       @urgent-text-color;
+}
+element.alternate.active {
+    background-color: @transparent;
+    text-color:       @index-color;
+}
+mode-switcher {
+    border:       2px 0px 0px ;
+    border-color: @transparent;
+}
+button.selected {
+    background-color: @transparent;
+    text-color:       @text-color;
+}
+inputbar {
+    spacing:    0;
+    text-color: @inactive-text-color;
+    padding:    1px ;
+}
+prompt, button, entry, case-indicator {
+    spacing:    0;
+    text-color: @highlight-text-color;
+}
+entry {
+    placeholder-color: @transparent;
+}
+inputbar {
+    children:   [ prompt,textbox-prompt-colon,entry,case-indicator ];
+}
+textbox-prompt-colon {
+    expand:     false;
+    str:        ":";
+    margin:     0px 0.3em 0em 0em ;
+    text-color: @highlight-text-color;
+}
