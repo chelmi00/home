@@ -1,18 +1,47 @@
-[$Version]
-update_info=dolphin_detailsmodesettings.upd:rename-leading-padding,dolphin_detailsmodesettings.upd:move-content-display
+MenuBar=Disabled
+
+[ExtractDialog]
+eDP-1 Height 1440x810=540
+eDP-1 Width 1440x810=960
 
 [General]
+ModifiedStartupSettings=false
 RememberOpenedTabs=false
 Version=202
-ViewPropsTimestamp=2023,7,24,15,8,9.847
+ViewPropsTimestamp=2022,10,4,13,31,12.52
+
+[IconsMode]
+IconSize=32
+MaximumTextLines=3
 
 [KFileDialog Settings]
 Places Icons Auto-resize=false
 Places Icons Static Size=22
 
+[KPropertiesDialog]
+eDP-1 Height 1440x810=616
+eDP-1 Height 1600x900=624
+eDP-1 Width 1440x810=438
+eDP-1 Width 1600x900=607
+
 [MainWindow]
 MenuBar=Disabled
 ToolBarsMovable=Disabled
+XWAYLAND0 Window-Maximized 1368x768=true
+XWAYLAND0 XPosition 1368x768=0
+XWAYLAND0 YPosition 1368x768=64
+eDP-1 Height 1440x810=755
+eDP-1 Height 1600x900=845
+eDP-1 Width 1440x810=1436
+eDP-1 Width 1600x900=796
+eDP-1 XPosition 1440x810=0
+eDP-1 XPosition 1600x900=2
+eDP-1 YPosition 1440x810=49
+eDP-1 YPosition 1600x900=26
+
+[Open-with settings]
+CompletionMode=1
+History=fire,fir,kate,kat
 
 [PreviewSettings]
-Plugins=svgthumbnail,jpegthumbnail,audiothumbnail,fontthumbnail,kraorathumbnail,cursorthumbnail,djvuthumbnail,opendocumentthumbnail,appimagethumbnail,imagethumbnail,comicbookthumbnail,exrthumbnail,windowsexethumbnail,windowsimagethumbnail,ebookthumbnail,directorythumbnail
+Plugins=appimagethumbnail,audiothumbnail,blenderthumbnail,comicbookthumbnail,djvuthumbnail,ebookthumbnail,exrthumbnail,directorythumbnail,fontthumbnail,imagethumbnail,jpegthumbnail,windowsexethumbnail,windowsimagethumbnail,opendocumentthumbnail,gsthumbnail,rawthumbnail,svgthumbnail,ffmpegthumbs
