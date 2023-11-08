@@ -134,6 +134,6 @@ ex ()
 # export TERM=xterm-256color
 # export LANG=en_US.UTF-8
 #
-# # Bitwarden Data
-# export BW_CLIENTID="user.5474947a-59d6-4b15-b406-b046009041c5"
-# export BW_CLIENTSECRET="OJrFFCTLxxe7NF6oDs91ki66qacFO9"
+# Bitwarden Data
+export BW_CLIENTID="user.5474947a-59d6-4b15-b406-b046009041c5"
+export BW_CLIENTSECRET="OJrFFCTLxxe7NF6oDs91ki66qacFO9"
