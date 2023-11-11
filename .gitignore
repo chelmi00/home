@@ -1,0 +1,45 @@
+# I block every folder and avoid it appears
+/*
+
+# Inside .config
+!/.config
+/.config/*
+!/.config/conky
+!/.config/dolphinrc
+!/.config/gtk-2.0
+!/.config/gtk-3.0
+!/.config/i3
+!/.config/i3status
+!/.config/kate
+!/.config/konsolerc
+!/.config/mimeapps.list
+!/.config/nitrogen
+!/.config/qt5ct
+!/.config/qutebrowser
+!/.config/rofi
+!/.config/themes
+!/.config/user-dirs.dirs
+!/.config/xfce4
+
+# KDE configurations
+!/.local
+/.local/*
+!/.local/share
+/.local/share/*
+!/.local/share/dolphin
+!/.local/share/kate
+!/.local/share/konsole
+
+# Under home
+!.bashrc
+!.bash_aliases
+!.bash_profile
+!.gtkrc-2.0
+!.profile
+
+!.gitignore
+
+#/*
+#!/.config
+#/.config/*
+#!/.config/i3
