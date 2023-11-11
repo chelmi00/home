@@ -31,9 +31,23 @@ colors() {
 	done
 }
 
+hex_to_dec() {
+    hex_color="$1"
+    if [[ $hex_color == \#* ]]; then
+        hex_color=${hex_color:1}
+    fi
+    r=$((16#${hex_color:0:2}))
+    g=$((16#${hex_color:2:2}))
+    b=$((16#${hex_color:4:2}))
+    echo "\[\e[38;2;${r};${g};${b}m\]"
+}
+
 [ -r /usr/share/bash-completion/bash_completion ] && . /usr/share/bash-completion/bash_completion
 if [ -f ~/.bash_aliases ]; then
     source ~/.bash_aliases
+fi
+if [ -f ~/.bash_profile ]; then
+    source ~/.bash_profile
 fi
 
 # Change the window title of X terminals
@@ -74,10 +88,10 @@ if ${use_color} ; then
 	if [[ ${EUID} == 0 ]] ; then
 		PS1='\[\033[01;31m\][\h\[\033[01;36m\] \W\[\033[01;31m\]]\$\[\033[00m\] '
 	else
-		pc_user='\[\e[38;2;27;161;136m\]' #1BA188
-		wd='\[\e[38;2;91;120;134m\]' #5B7886
-		dollar='\[\e[38;2;3;182;204m\]' #03B6CC
-		input='\[\e[38;2;255;255;255m\]' #FFFFFF
+		pc_user=$(hex_to_dec '#16A085')
+		wd=$(hex_to_dec '#F6A085')
+		dollar=$(hex_to_dec '#16A0C5')
+		input=$(hex_to_dec '#F9FAF9')
 		PS1="${pc_user}\u@\h ${wd}\w ${dollar}\$ ${input}"
 	fi
 
@@ -102,38 +116,14 @@ shopt -s expand_aliases
 # Enable history appending instead of overwriting.  #139609
 shopt -s histappend
 
-# ex - archive extractor
-# usage: ex <file>
-ex ()
-{
-  if [ -f $1 ] ; then
-    case $1 in
-      *.tar.bz2)   tar xjf $1   ;;
-      *.tar.gz)    tar xzf $1   ;;
-      *.bz2)       bunzip2 $1   ;;
-      *.rar)       unrar x $1     ;;
-      *.gz)        gunzip $1    ;;
-      *.tar)       tar xf $1    ;;
-      *.tbz2)      tar xjf $1   ;;
-      *.tgz)       tar xzf $1   ;;
-      *.zip)       unzip $1     ;;
-      *.Z)         uncompress $1;;
-      *.7z)        7z x $1      ;;
-      *)           echo "'$1' cannot be extracted via ex()" ;;
-    esac
-  else
-    echo "'$1' is not a valid file"
-  fi
-}
-
-# export QT_SELECT=4
-
 # # Environment Variables
-# export GTK_THEME=Breeze-Dark
 # export QT_QPA_PLATFORMTHEME=qt5ct
 # export TERM=xterm-256color
 # export LANG=en_US.UTF-8
-#
+# export QT_SELECT=4
+
 # Bitwarden Data
 export BW_CLIENTID="user.5474947a-59d6-4b15-b406-b046009041c5"
 export BW_CLIENTSECRET="OJrFFCTLxxe7NF6oDs91ki66qacFO9"
+
+export GTK_THEME=Adapta-Nokto-Eta-Maia
