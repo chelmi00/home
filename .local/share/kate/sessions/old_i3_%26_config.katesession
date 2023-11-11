@@ -18,6 +18,16 @@ Mode=Normal
 Mode Set By User=false
 URL=file:///home/chelmi/.config/mimeapps.list
 
+[Document 2]
+Bookmarks=
+Encoding=UTF-8
+Highlighting=None
+Highlighting Set By User=false
+Indentation Mode=normal
+Mode=Normal
+Mode Set By User=false
+URL=file:///home/chelmi/old/.config/i3/brightness/brightness_value.txt
+
 [Kate Plugins]
 cmaketoolsplugin=false
 compilerexplorer=false
@@ -53,11 +63,11 @@ textfilterplugin=true
 
 [MainWindow0]
 1920x1080 screen: Height=1027
-1920x1080 screen: Width=939
-1920x1080 screen: XPosition=13
-1920x1080 screen: YPosition=13
+1920x1080 screen: Width=1920
+1920x1080 screen: XPosition=0
+1920x1080 screen: YPosition=26
 Active ViewSpace=0
-Kate-MDI-H-Splitter=0,891,0
+Kate-MDI-H-Splitter=160,1708,0
 Kate-MDI-Sidebar-0-Bar-0-TvList=kate_private_plugin_katefiletreeplugin,kateproject,kateprojectgit,lspclient_symbol_outline
 Kate-MDI-Sidebar-0-LastSize=160
 Kate-MDI-Sidebar-0-SectSizes=0
@@ -69,11 +79,11 @@ Kate-MDI-Sidebar-1-Splitter=917
 Kate-MDI-Sidebar-2-Bar-0-TvList=
 Kate-MDI-Sidebar-2-LastSize=200
 Kate-MDI-Sidebar-2-SectSizes=0
-Kate-MDI-Sidebar-2-Splitter=727
+Kate-MDI-Sidebar-2-Splitter=1708
 Kate-MDI-Sidebar-3-Bar-0-TvList=output,diagnostics,kate_plugin_katesearch,kateprojectinfo,kate_private_plugin_katekonsoleplugin
 Kate-MDI-Sidebar-3-LastSize=200
 Kate-MDI-Sidebar-3-SectSizes=0
-Kate-MDI-Sidebar-3-Splitter=539
+Kate-MDI-Sidebar-3-Splitter=1530
 Kate-MDI-Sidebar-Style=2
 Kate-MDI-Sidebar-Visible=true
 Kate-MDI-ToolView-diagnostics-Position=3
@@ -90,30 +100,30 @@ Kate-MDI-ToolView-kate_private_plugin_katekonsoleplugin-Show-Button-In-Sidebar=t
 Kate-MDI-ToolView-kate_private_plugin_katekonsoleplugin-Visible=false
 Kate-MDI-ToolView-kateproject-Position=0
 Kate-MDI-ToolView-kateproject-Show-Button-In-Sidebar=true
-Kate-MDI-ToolView-kateproject-Visible=false
+Kate-MDI-ToolView-kateproject-Visible=true
 Kate-MDI-ToolView-kateprojectgit-Position=0
 Kate-MDI-ToolView-kateprojectgit-Show-Button-In-Sidebar=true
 Kate-MDI-ToolView-kateprojectgit-Visible=false
 Kate-MDI-ToolView-kateprojectinfo-Position=3
 Kate-MDI-ToolView-kateprojectinfo-Show-Button-In-Sidebar=true
-Kate-MDI-ToolView-kateprojectinfo-Visible=false
+Kate-MDI-ToolView-kateprojectinfo-Visible=true
 Kate-MDI-ToolView-lspclient_symbol_outline-Position=0
 Kate-MDI-ToolView-lspclient_symbol_outline-Show-Button-In-Sidebar=true
 Kate-MDI-ToolView-lspclient_symbol_outline-Visible=false
 Kate-MDI-ToolView-output-Position=3
 Kate-MDI-ToolView-output-Show-Button-In-Sidebar=true
-Kate-MDI-ToolView-output-Visible=true
+Kate-MDI-ToolView-output-Visible=false
 Kate-MDI-V-Splitter=0,713,200
-State=AAAA/wAAAAD9AAAAAAAAA6sAAAO1AAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAIAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgEAAAAA/////wAAAAAAAAAAAAAAGABoAGEAbQBiAHUAcgBnAGUAcgBCAGEAcgEAAAIB/////wAAAAAAAAAA
+State=AAAA/wAAAAD9AAAAAAAAB4AAAAO1AAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAIAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgEAAAAA/////wAAAAAAAAAAAAAAGABoAGEAbQBiAHUAcgBnAGUAcgBCAGEAcgEAAAIB/////wAAAAAAAAAA
 ToolBarsMovable=Disabled
 eDP-1=eDP-1
 
 [MainWindow0 Settings]
 1920x1080 screen: Height=1027
-1920x1080 screen: Width=939
-1920x1080 screen: XPosition=13
-1920x1080 screen: YPosition=13
-State=AAAA/wAAAAD9AAAAAAAAA6sAAAO1AAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAIAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgEAAAAA/////wAAAAAAAAAAAAAAGABoAGEAbQBiAHUAcgBnAGUAcgBCAGEAcgEAAAIB/////wAAAAAAAAAA
+1920x1080 screen: Width=1920
+1920x1080 screen: XPosition=0
+1920x1080 screen: YPosition=26
+State=AAAA/wAAAAD9AAAAAAAAB4AAAAO1AAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAIAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgEAAAAA/////wAAAAAAAAAAAAAAGABoAGEAbQBiAHUAcgBnAGUAcgBCAGEAcgEAAAIB/////wAAAAAAAAAA
 ToolBarsMovable=Disabled
 WindowState=8
 eDP-1=eDP-1
@@ -121,13 +131,15 @@ eDP-1=eDP-1
 [MainWindow0-Splitter 0]
 Children=MainWindow0-ViewSpace 0
 Orientation=1
-Sizes=891
+Sizes=1708
 
 [MainWindow0-ViewSpace 0]
-Active View=file:///home/chelmi/old/.config/i3/config
-Count=1
-Documents=file:///home/chelmi/old/.config/i3/config,file:///home/chelmi/.config/mimeapps.list
+Active View=file:///home/chelmi/.config/mimeapps.list
+Count=3
+Documents=file:///home/chelmi/old/.config/i3/config,file:///home/chelmi/.config/mimeapps.list,file:///home/chelmi/old/.config/i3/brightness/brightness_value.txt
 View 0=file:///home/chelmi/old/.config/i3/config
+View 1=file:///home/chelmi/.config/mimeapps.list
+View 2=file:///home/chelmi/old/.config/i3/brightness/brightness_value.txt
 
 [MainWindow0-ViewSpace 0 file:///home/chelmi/.config/mimeapps.list]
 CursorColumn=0
@@ -137,16 +149,24 @@ JumpList=
 TextFolding={"checksum":"ddd4b052858d01713e9cc1c00ccf9600a8c7038e","ranges":[]}
 ViMarks=
 
+[MainWindow0-ViewSpace 0 file:///home/chelmi/old/.config/i3/brightness/brightness_value.txt]
+CursorColumn=0
+CursorLine=0
+Dynamic Word Wrap=true
+JumpList=
+TextFolding={"checksum":"425445004f7bb2338f8cfdbd4e52f08db0304f24","ranges":[]}
+ViMarks=
+
 [MainWindow0-ViewSpace 0 file:///home/chelmi/old/.config/i3/config]
-CursorColumn=37
-CursorLine=175
+CursorColumn=0
+CursorLine=212
 Dynamic Word Wrap=true
 JumpList=
 TextFolding={"checksum":"703d354227fdbe4cc1c6825e7b63b6acdc76f552","ranges":[]}
 ViMarks=
 
 [Open Documents]
-Count=2
+Count=3
 
 [Open MainWindows]
 Count=1
@@ -178,23 +198,23 @@ SearchDiskFiless=
 UseRegExp=false
 
 [Recent Files]
-File1[$e]=$HOME/old/gh_token.txt
-File10[$e]=$HOME/old/.config/i3/lock/locker.sh
-File2[$e]=$HOME/chelmi/.config/i3
-File3[$e]=$HOME
-File4[$e]=$HOME/old/.config/i3
-File5[$e]=$HOME/.config/mimeapps.list
-File6[$e]=$HOME/old/.config/i3/config
-File7[$e]=$HOME/old/.config/i3/session/logout.sh
-File8[$e]=$HOME/old/.config/i3/session/shutdown.sh
-File9[$e]=$HOME/old/.config/i3/lock/lock.sh
-Name1[$e]=gh_token.txt
-Name10[$e]=locker.sh
-Name2[$e]=i3
-Name3[$e]=chelmi
-Name4[$e]=i3
-Name5[$e]=mimeapps.list
-Name6[$e]=config
-Name7[$e]=logout.sh
-Name8[$e]=shutdown.sh
-Name9[$e]=lock.sh
+File1[$e]=$HOME/old/.config/i3/session/logout.sh
+File10[$e]=$HOME/.config/mimeapps.list
+File2[$e]=$HOME/old/.config/i3/session/shutdown.sh
+File3[$e]=$HOME/old/.config/i3/lock/lock.sh
+File4[$e]=$HOME/old/.config/i3/lock/locker.sh
+File5[$e]=$HOME/old/.config/i3/installations/pacman.txt
+File6[$e]=$HOME/old/.config/i3/src/rma.png
+File7[$e]=$HOME/.bashrc
+File8[$e]=$HOME/old/.config/i3/config
+File9[$e]=$HOME/old/.config/i3/brightness/brightness_value.txt
+Name1[$e]=logout.sh
+Name10[$e]=mimeapps.list
+Name2[$e]=shutdown.sh
+Name3[$e]=lock.sh
+Name4[$e]=locker.sh
+Name5[$e]=pacman.txt
+Name6[$e]=rma.png
+Name7[$e]=.bashrc
+Name8[$e]=config
+Name9[$e]=brightness_value.txt
