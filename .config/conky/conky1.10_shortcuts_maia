@@ -18,14 +18,14 @@ conky.config = {
 	use_xft = true,
 }
 conky.text = [[
+${color2}resize gaps - ${color}mod+Shift+g
 ${color2}change borders - ${color}mod+u/y/n
 ${color2}open alsamixer - ${color}mod+Ctrl+m
-${color2}open bmenu - ${color}mod+Ctrl+m
+${color2}open bmenu - ${color}mod+Ctrl+b
 ${color2}open dolphin - ${color}mod+Shift+d
-${color2}toggle split direction - ${color}mod+Ctrl+q/v/h
-${color2}floating toggle - ${color}mod+space
-${color2}Scratchpad - ${color}mod+(Shift)+minus
 ${color2}lock screen - ${color}mod+Shift+n
+${color2}toggle split direction - ${color}mod+Ctrl+q/v/h
+${color2}floating toggle - ${color}mod+(Shift)+space
+${color2}Scratchpad - ${color}mod+(Shift)+minus
 ${color2}power off prompt - ${color}mod+Shift+e / Ctrl+Alt+supr
-${color2}resize gaps - ${color}mod+Shift+g
 ]]
