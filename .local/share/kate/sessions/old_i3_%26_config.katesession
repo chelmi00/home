@@ -31,8 +31,8 @@ URL=file:///home/chelmi/old/.config/i3/brightness/brightness_value.txt
 [Document 3]
 Bookmarks=
 Encoding=UTF-8
-Highlighting=None
-Highlighting Set By User=false
+Highlighting=TOML
+Highlighting Set By User=true
 Indentation Mode=normal
 Mode=Normal
 Mode Set By User=false
@@ -72,16 +72,16 @@ tabswitcherplugin=true
 textfilterplugin=true
 
 [MainWindow0]
-1920x1080 screen: Height=1027
-1920x1080 screen: Width=939
-1920x1080 screen: XPosition=968
-1920x1080 screen: YPosition=13
+1920x1080 screen: Height=1053
+1920x1080 screen: Width=1920
+1920x1080 screen: XPosition=0
+1920x1080 screen: YPosition=0
 Active ViewSpace=0
-Kate-MDI-H-Splitter=0,891,0
+Kate-MDI-H-Splitter=0,1872,0
 Kate-MDI-Sidebar-0-Bar-0-TvList=kate_private_plugin_katefiletreeplugin,kateproject,kateprojectgit,lspclient_symbol_outline
 Kate-MDI-Sidebar-0-LastSize=160
 Kate-MDI-Sidebar-0-SectSizes=0
-Kate-MDI-Sidebar-0-Splitter=917
+Kate-MDI-Sidebar-0-Splitter=943
 Kate-MDI-Sidebar-1-Bar-0-TvList=
 Kate-MDI-Sidebar-1-LastSize=200
 Kate-MDI-Sidebar-1-SectSizes=0
@@ -93,7 +93,7 @@ Kate-MDI-Sidebar-2-Splitter=1708
 Kate-MDI-Sidebar-3-Bar-0-TvList=output,diagnostics,kate_plugin_katesearch,kateprojectinfo,kate_private_plugin_katekonsoleplugin
 Kate-MDI-Sidebar-3-LastSize=200
 Kate-MDI-Sidebar-3-SectSizes=0
-Kate-MDI-Sidebar-3-Splitter=581
+Kate-MDI-Sidebar-3-Splitter=1562
 Kate-MDI-Sidebar-Style=2
 Kate-MDI-Sidebar-Visible=true
 Kate-MDI-ToolView-diagnostics-Position=3
@@ -123,17 +123,17 @@ Kate-MDI-ToolView-lspclient_symbol_outline-Visible=false
 Kate-MDI-ToolView-output-Position=3
 Kate-MDI-ToolView-output-Show-Button-In-Sidebar=true
 Kate-MDI-ToolView-output-Visible=false
-Kate-MDI-V-Splitter=0,713,200
-State=AAAA/wAAAAD9AAAAAAAAA6sAAAO1AAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAIAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgEAAAAA/////wAAAAAAAAAAAAAAGABoAGEAbQBiAHUAcgBnAGUAcgBCAGEAcgEAAAIB/////wAAAAAAAAAA
+Kate-MDI-V-Splitter=0,739,200
+State=AAAA/wAAAAD9AAAAAAAAB4AAAAPPAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAIAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgEAAAAA/////wAAAAAAAAAAAAAAGABoAGEAbQBiAHUAcgBnAGUAcgBCAGEAcgEAAAIB/////wAAAAAAAAAA
 ToolBarsMovable=Disabled
 eDP-1=eDP-1
 
 [MainWindow0 Settings]
-1920x1080 screen: Height=1027
-1920x1080 screen: Width=939
-1920x1080 screen: XPosition=968
-1920x1080 screen: YPosition=13
-State=AAAA/wAAAAD9AAAAAAAAA6sAAAO1AAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAIAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgEAAAAA/////wAAAAAAAAAAAAAAGABoAGEAbQBiAHUAcgBnAGUAcgBCAGEAcgEAAAIB/////wAAAAAAAAAA
+1920x1080 screen: Height=1053
+1920x1080 screen: Width=1920
+1920x1080 screen: XPosition=0
+1920x1080 screen: YPosition=0
+State=AAAA/wAAAAD9AAAAAAAAB4AAAAPPAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAIAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgEAAAAA/////wAAAAAAAAAAAAAAGABoAGEAbQBiAHUAcgBnAGUAcgBCAGEAcgEAAAIB/////wAAAAAAAAAA
 ToolBarsMovable=Disabled
 WindowState=8
 eDP-1=eDP-1
@@ -141,7 +141,7 @@ eDP-1=eDP-1
 [MainWindow0-Splitter 0]
 Children=MainWindow0-ViewSpace 0
 Orientation=1
-Sizes=891
+Sizes=1872
 
 [MainWindow0-ViewSpace 0]
 Active View=file:///home/chelmi/.config/i3/config
