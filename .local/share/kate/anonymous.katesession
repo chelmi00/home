@@ -18,6 +18,16 @@ Mode=Bash
 Mode Set By User=false
 URL=file:///home/chelmi/old/.config/i3/i3blocks/bright.sh
 
+[Document 2]
+Bookmarks=
+Encoding=UTF-8
+Highlighting=None
+Highlighting Set By User=false
+Indentation Mode=normal
+Mode=Normal
+Mode Set By User=false
+URL=file:///home/chelmi/old/.config/i3/config
+
 [Kate Plugins]
 cmaketoolsplugin=false
 compilerexplorer=false
@@ -52,16 +62,16 @@ tabswitcherplugin=true
 textfilterplugin=true
 
 [MainWindow0]
-1920x1080 screen: Height=1027
-1920x1080 screen: Width=939
-1920x1080 screen: XPosition=968
-1920x1080 screen: YPosition=13
+1600x900 screen: Height=873
+1600x900 screen: Width=1600
+1600x900 screen: XPosition=0
+1600x900 screen: YPosition=0
 Active ViewSpace=0
-Kate-MDI-H-Splitter=160,727,0
+Kate-MDI-H-Splitter=160,1388,0
 Kate-MDI-Sidebar-0-Bar-0-TvList=kate_private_plugin_katefiletreeplugin,kateproject,kateprojectgit,lspclient_symbol_outline
 Kate-MDI-Sidebar-0-LastSize=160
 Kate-MDI-Sidebar-0-SectSizes=0
-Kate-MDI-Sidebar-0-Splitter=917
+Kate-MDI-Sidebar-0-Splitter=763
 Kate-MDI-Sidebar-1-Bar-0-TvList=
 Kate-MDI-Sidebar-1-LastSize=200
 Kate-MDI-Sidebar-1-SectSizes=0
@@ -73,7 +83,7 @@ Kate-MDI-Sidebar-2-Splitter=727
 Kate-MDI-Sidebar-3-Bar-0-TvList=output,diagnostics,kate_plugin_katesearch,kateprojectinfo,kate_private_plugin_katekonsoleplugin
 Kate-MDI-Sidebar-3-LastSize=200
 Kate-MDI-Sidebar-3-SectSizes=0
-Kate-MDI-Sidebar-3-Splitter=571
+Kate-MDI-Sidebar-3-Splitter=1192
 Kate-MDI-Sidebar-Style=2
 Kate-MDI-Sidebar-Visible=true
 Kate-MDI-ToolView-diagnostics-Position=3
@@ -103,17 +113,17 @@ Kate-MDI-ToolView-lspclient_symbol_outline-Visible=false
 Kate-MDI-ToolView-output-Position=3
 Kate-MDI-ToolView-output-Show-Button-In-Sidebar=true
 Kate-MDI-ToolView-output-Visible=false
-Kate-MDI-V-Splitter=0,713,200
-State=AAAA/wAAAAD9AAAAAAAAA6sAAAO1AAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAIAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgEAAAAA/////wAAAAAAAAAAAAAAGABoAGEAbQBiAHUAcgBnAGUAcgBCAGEAcgEAAAIB/////wAAAAAAAAAA
+Kate-MDI-V-Splitter=0,559,200
+State=AAAA/wAAAAD9AAAAAAAABkAAAAMbAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAIAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgEAAAAA/////wAAAAAAAAAAAAAAGABoAGEAbQBiAHUAcgBnAGUAcgBCAGEAcgEAAAIB/////wAAAAAAAAAA
 ToolBarsMovable=Disabled
 eDP-1=eDP-1
 
 [MainWindow0 Settings]
-1920x1080 screen: Height=1027
-1920x1080 screen: Width=939
-1920x1080 screen: XPosition=968
-1920x1080 screen: YPosition=13
-State=AAAA/wAAAAD9AAAAAAAAA6sAAAO1AAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAIAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgEAAAAA/////wAAAAAAAAAAAAAAGABoAGEAbQBiAHUAcgBnAGUAcgBCAGEAcgEAAAIB/////wAAAAAAAAAA
+1600x900 screen: Height=873
+1600x900 screen: Width=1600
+1600x900 screen: XPosition=0
+1600x900 screen: YPosition=0
+State=AAAA/wAAAAD9AAAAAAAABkAAAAMbAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAIAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgEAAAAA/////wAAAAAAAAAAAAAAGABoAGEAbQBiAHUAcgBnAGUAcgBCAGEAcgEAAAIB/////wAAAAAAAAAA
 ToolBarsMovable=Disabled
 WindowState=8
 eDP-1=eDP-1
@@ -121,14 +131,23 @@ eDP-1=eDP-1
 [MainWindow0-Splitter 0]
 Children=MainWindow0-ViewSpace 0
 Orientation=1
-Sizes=727
+Sizes=1388
 
 [MainWindow0-ViewSpace 0]
-Active View=file:///home/chelmi/old/.config/i3/i3blocks/bright.sh
-Count=2
-Documents=file:///home/chelmi/old/.config/i3/i3blocks.conf,file:///home/chelmi/old/.config/i3/i3blocks/bright.sh
+Active View=file:///home/chelmi/old/.config/i3/config
+Count=3
+Documents=file:///home/chelmi/old/.config/i3/i3blocks.conf,file:///home/chelmi/old/.config/i3/i3blocks/bright.sh,file:///home/chelmi/old/.config/i3/config
 View 0=file:///home/chelmi/old/.config/i3/i3blocks.conf
 View 1=file:///home/chelmi/old/.config/i3/i3blocks/bright.sh
+View 2=file:///home/chelmi/old/.config/i3/config
+
+[MainWindow0-ViewSpace 0 file:///home/chelmi/old/.config/i3/config]
+CursorColumn=105
+CursorLine=252
+Dynamic Word Wrap=true
+JumpList=
+TextFolding={"checksum":"703d354227fdbe4cc1c6825e7b63b6acdc76f552","ranges":[]}
+ViMarks=
 
 [MainWindow0-ViewSpace 0 file:///home/chelmi/old/.config/i3/i3blocks.conf]
 CursorColumn=37
@@ -140,14 +159,14 @@ ViMarks=
 
 [MainWindow0-ViewSpace 0 file:///home/chelmi/old/.config/i3/i3blocks/bright.sh]
 CursorColumn=0
-CursorLine=2
+CursorLine=6
 Dynamic Word Wrap=true
 JumpList=
 TextFolding={"checksum":"16b8e337128d22c6fb5d8984a9efce88825a830d","ranges":[]}
 ViMarks=
 
 [Open Documents]
-Count=2
+Count=3
 
 [Open MainWindows]
 Count=1
@@ -187,6 +206,7 @@ File5[$e]=/run/media/chelmi/KINGSTON/chelmi/.bashrc
 File6[$e]=$HOME/old/.config/i3
 File7[$e]=$HOME/old/.config/i3/i3blocks.conf
 File8[$e]=$HOME/old/.config/i3/i3blocks/bright.sh
+File9[$e]=$HOME/old/.config/i3/config
 Name1[$e]=gh_token.txt
 Name2[$e]=i3
 Name3[$e]=chelmi
@@ -195,3 +215,4 @@ Name5[$e]=.bashrc
 Name6[$e]=i3
 Name7[$e]=i3blocks.conf
 Name8[$e]=bright.sh
+Name9[$e]=config
