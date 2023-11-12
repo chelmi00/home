@@ -4,6 +4,9 @@ MenuBar=Disabled
 eDP-1 Height 1440x810=540
 eDP-1 Width 1440x810=960
 
+[FoldersPanel]
+HiddenFilesShown=true
+
 [General]
 ModifiedStartupSettings=false
 RememberOpenedTabs=false
