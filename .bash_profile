@@ -34,3 +34,8 @@ cl() {
 copy() {
 	xclip -sel c < "$@"
 }
+
+git_kde() {
+	git add .config/dolphinrc .config/kate .config/konsolerc .local/share/dolphin .local/share/kate .local/share/konsole
+	git commit -m "Minor KDE changes"
+}
