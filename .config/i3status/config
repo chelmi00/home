@@ -8,9 +8,10 @@
 
 general {
         colors = true
-        interval = 3
+        interval = 1
         color_good = "#16A085"
         color_bad = "#E5201D"
+		color_degraded = "#FF99FF"
 }
 
 order += "volume master"
@@ -38,7 +39,8 @@ battery all {
 	last_full_capacity = true
 	integer_battery_capacity = true
 	status_chr = "⚡"
-	status_bat = ""
+	# status_bat = ""
+	status_bat = " "
 	status_full = "☻"
 	low_threshold = 20
 	threshold_type = "percentage"
