@@ -4,12 +4,26 @@
 install_debian() {
     sudo apt-get update
     sudo apt-get install -y alsa-utils bitwarden-cli clipit conky discord dolphin kate konsole lightdm lxappearance nitrogen notion-app picom python3-pyperclip python3-tldextract qt5ct qutebrowser redshift rofi vscode xfce4-power-manager
+
+     if sudo apt-get install -y blurlock; then
+        echo "blurlock instalado con éxito"
+    else
+        echo "blurlock no está disponible, instalando i3lock"
+        sudo apt-get install -y i3lock
+    fi
 }
 
 # Función para instalar paquetes en sistemas basados en Arch
 install_arch() {
     sudo pacman -Syu
     sudo pacman -S alsa-utils bitwarden-cli clipit conky discord dolphin kate konsole lightdm lxappearance nitrogen notion-app picom python-pyperclip python-tldextract qt5ct qutebrowser redshift rofi code xfce4-power-manager
+
+    if sudo pacman -S blurlock; then
+        echo "blurlock instalado con éxito"
+    else
+        echo "blurlock no está disponible, instalando i3lock"
+        sudo pacman -S i3lock
+    fi
 }
 
 # Detectar la distribución de Linux
@@ -31,3 +45,5 @@ else
     exit 1
 fi
 
+
+# Install blurlock or i3lock
