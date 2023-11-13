@@ -1,0 +1,33 @@
+#!/bin/bash
+
+# Función para instalar paquetes en sistemas basados en Debian
+install_debian() {
+    sudo apt-get update
+    sudo apt-get install -y alsa-utils bitwarden-cli clipit conky discord dolphin kate konsole lightdm lxappearance nitrogen notion-app picom python3-pyperclip python3-tldextract qt5ct qutebrowser redshift rofi vscode xfce4-power-manager
+}
+
+# Función para instalar paquetes en sistemas basados en Arch
+install_arch() {
+    sudo pacman -Syu
+    sudo pacman -S alsa-utils bitwarden-cli clipit conky discord dolphin kate konsole lightdm lxappearance nitrogen notion-app picom python-pyperclip python-tldextract qt5ct qutebrowser redshift rofi code xfce4-power-manager
+}
+
+# Detectar la distribución de Linux
+if [ -f /etc/os-release ]; then
+    . /etc/os-release
+    case $ID in
+        debian|ubuntu|linuxmint)
+            install_debian
+            ;;
+        arch|manjaro)
+            install_arch
+            ;;
+        *)
+            echo "Distribución de Linux no soportada"
+            exit 1
+    esac
+else
+    echo "No es un sistema Linux"
+    exit 1
+fi
+
