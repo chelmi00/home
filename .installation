@@ -45,5 +45,3 @@ else
     exit 1
 fi
 
-
-# Install blurlock or i3lock
