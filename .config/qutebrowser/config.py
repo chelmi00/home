@@ -140,16 +140,6 @@ config.set('content.images', True, 'chrome-devtools://*')
 # Type: Bool
 config.set('content.images', True, 'devtools://*')
 
-# Allow JavaScript to read from or write to the clipboard. With
-# QtWebEngine, writing the clipboard as response to a user interaction
-# is always allowed.
-# Type: String
-# Valid values:
-#   - none: Disable access to clipboard.
-#   - access: Allow reading from and writing to the clipboard.
-#   - access-paste: Allow accessing the clipboard and pasting clipboard content.
-c.content.javascript.clipboard = 'access-paste'
-
 # Enable JavaScript.
 # Type: Bool
 config.set('content.javascript.enabled', True, 'chrome-devtools://*')
@@ -225,10 +215,9 @@ c.downloads.remove_finished = -1
 c.editor.command = ['alacritty', '-e', 'vim', '{file}']
 
 # Handler for selecting file(s) in forms. If `external`, then the
-# commands specified by `fileselect.single_file.command`,
-# `fileselect.multiple_files.command` and `fileselect.folder.command`
-# are used to select one file, multiple files, and folders,
-# respectively.
+# commands specified by `fileselect.single_file.command` and
+# `fileselect.multiple_files.command` are used to select one or multiple
+# files respectively.
 # Type: String
 # Valid values:
 #   - default: Use the default file selector.
@@ -241,7 +230,7 @@ c.fileselect.handler = 'external'
 # the file to be written to. If not contained in any argument, the
 # standard output of the command is read instead.
 # Type: ShellCommand
-c.fileselect.single_file.command = ['alacritty', '-t', 'ranger', '-e', 'ranger', '--choosefile={}']
+c.fileselect.single_file.command = ['gnome-terminal', '--', 'bash', '-c', 'ranger --choosefile={}']
 
 # Command (and arguments) to use for selecting multiple files in forms.
 # The command should write the selected file paths to the specified file
@@ -250,11 +239,16 @@ c.fileselect.single_file.command = ['alacritty', '-t', 'ranger', '-e', 'ranger',
 # contained in any argument, the   standard output of the command is
 # read instead.
 # Type: ShellCommand
-c.fileselect.multiple_files.command = ['alacritty', '-t', 'ranger', '-e', 'ranger', '--choosefiles={}']
+c.fileselect.multiple_files.command = ['gnome-terminal', '--', 'bash', '-c', 'ranger --choosefiles={}']
 
 # CSS border value for hints.
 # Type: String
 c.hints.border = '1px solid #282a36'
+
+# Automatically enter insert mode if an editable element is focused
+# after loading the page.
+# Type: Bool
+c.input.insert_mode.auto_load = True
 
 # When to show the statusbar.
 # Type: String
@@ -656,8 +650,6 @@ c.colors.tabs.selected.even.bg = '#282a36'
 # `colors.webpage.darkmode.threshold.text` to 150 and
 # `colors.webpage.darkmode.threshold.background` to 205.  - "With
 # selective inversion of everything": Combines the two variants   above.
-# - "With increased text contrast": Set
-# `colors.webpage.darkmode.increase_text_contrast` (QtWebEngine 6.3+)
 # Type: Bool
 c.colors.webpage.darkmode.enabled = True
 
@@ -677,12 +669,14 @@ config.bind('W', 'hint links spawn mpv {hint-url}')
 config.bind('cc', 'yank selection')
 config.bind('ct', 'hint links spawn --detach xdotool click 1')
 config.bind('gp', 'spawn --userscript qute-bitwarden')
-config.bind('sp', 'spawn --userscript ~/.config/qutebrowser/userscripts/save_page.py {url}')
+config.bind('pm', 'spawn --userscript shortcuts')
+config.bind('sp', 'spawn --userscript save_page.py {url}')
 config.bind('tt', ':open -t')
 config.bind('xx', 'config-cycle statusbar.show always never;; config-cycle tabs.show multiple never')
 
 # Bindings for insert mode
 config.bind('<Ctrl+k>', 'fake-key <Shift-End><Delete>', mode='insert')
 config.bind('<Ctrl+m><Ctrl+e>', 'edit-text', mode='insert')
+config.bind('<Ctrl+p>', 'spawn --userscript shortcuts', mode='insert')
 config.bind('<Ctrl+u>', 'fake-key <Shift-Home><Delete>', mode='insert')
 config.bind('<Ctrl+w>', 'fake-key <Ctrl-backspace>', mode='insert')
