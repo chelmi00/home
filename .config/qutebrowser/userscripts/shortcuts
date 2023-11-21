@@ -1,0 +1,15 @@
+#!/bin/bash
+
+strings=(
+    "m.fvillasante"
+    "m.fvillasante@alumnos.upm.es"
+    "migfervil@hotmail.es"
+    "migfervilesp@gmail.com"
+)
+
+# Use rofi to display the list of strings and copy the selected string to the clipboard
+selected=$(printf '%s\n' "${strings[@]}" | rofi -dmenu -p "Select a string" -no-custom)
+echo -n "$selected" | xclip -selection clipboard
+
+# Paste the selected string
+echo "i$selected" | xdotool type --clearmodifiers --file -
