@@ -1,32 +1,12 @@
 [Document 0]
 Bookmarks=
 Encoding=UTF-8
-Highlighting=TOML
-Highlighting Set By User=false
-Indentation Mode=normal
-Mode=TOML
-Mode Set By User=false
-URL=file:///home/chelmi/old/.config/i3/i3blocks.conf
-
-[Document 1]
-Bookmarks=
-Encoding=UTF-8
 Highlighting=Bash
 Highlighting Set By User=false
 Indentation Mode=normal
 Mode=Bash
 Mode Set By User=false
-URL=file:///home/chelmi/old/.config/i3/i3blocks/bright.sh
-
-[Document 2]
-Bookmarks=
-Encoding=UTF-8
-Highlighting=None
-Highlighting Set By User=false
-Indentation Mode=normal
-Mode=Normal
-Mode Set By User=false
-URL=file:///home/chelmi/old/.config/i3/config
+URL=file:///home/chelmi/.config/i3/brightness/brightness.sh
 
 [Kate Plugins]
 cmaketoolsplugin=false
@@ -39,7 +19,7 @@ katebuildplugin=false
 katecloseexceptplugin=false
 katecolorpickerplugin=false
 katectagsplugin=false
-katefilebrowserplugin=false
+katefilebrowserplugin=true
 katefiletreeplugin=true
 kategdbplugin=false
 kategitblameplugin=false
@@ -62,28 +42,28 @@ tabswitcherplugin=true
 textfilterplugin=true
 
 [MainWindow0]
-1600x900 screen: Height=873
-1600x900 screen: Width=1600
-1600x900 screen: XPosition=0
-1600x900 screen: YPosition=0
+1600x900 screen: Height=845
+1600x900 screen: Width=1596
+1600x900 screen: XPosition=2
+1600x900 screen: YPosition=26
 Active ViewSpace=0
-Kate-MDI-H-Splitter=160,1388,0
-Kate-MDI-Sidebar-0-Bar-0-TvList=kate_private_plugin_katefiletreeplugin,kateproject,kateprojectgit,lspclient_symbol_outline
+Kate-MDI-H-Splitter=160,1352,0
+Kate-MDI-Sidebar-0-Bar-0-TvList=kate_private_plugin_katefiletreeplugin,kateproject,kateprojectgit,kate_private_plugin_katefileselectorplugin
 Kate-MDI-Sidebar-0-LastSize=160
 Kate-MDI-Sidebar-0-SectSizes=0
-Kate-MDI-Sidebar-0-Splitter=763
-Kate-MDI-Sidebar-1-Bar-0-TvList=
-Kate-MDI-Sidebar-1-LastSize=200
+Kate-MDI-Sidebar-0-Splitter=780
+Kate-MDI-Sidebar-1-Bar-0-TvList=lspclient_symbol_outline
+Kate-MDI-Sidebar-1-LastSize=160
 Kate-MDI-Sidebar-1-SectSizes=0
-Kate-MDI-Sidebar-1-Splitter=917
+Kate-MDI-Sidebar-1-Splitter=780
 Kate-MDI-Sidebar-2-Bar-0-TvList=
-Kate-MDI-Sidebar-2-LastSize=200
+Kate-MDI-Sidebar-2-LastSize=160
 Kate-MDI-Sidebar-2-SectSizes=0
-Kate-MDI-Sidebar-2-Splitter=727
+Kate-MDI-Sidebar-2-Splitter=1352
 Kate-MDI-Sidebar-3-Bar-0-TvList=output,diagnostics,kate_plugin_katesearch,kateprojectinfo,kate_private_plugin_katekonsoleplugin
-Kate-MDI-Sidebar-3-LastSize=200
+Kate-MDI-Sidebar-3-LastSize=185
 Kate-MDI-Sidebar-3-SectSizes=0
-Kate-MDI-Sidebar-3-Splitter=1192
+Kate-MDI-Sidebar-3-Splitter=1030
 Kate-MDI-Sidebar-Style=2
 Kate-MDI-Sidebar-Visible=true
 Kate-MDI-ToolView-diagnostics-Position=3
@@ -92,12 +72,15 @@ Kate-MDI-ToolView-diagnostics-Visible=false
 Kate-MDI-ToolView-kate_plugin_katesearch-Position=3
 Kate-MDI-ToolView-kate_plugin_katesearch-Show-Button-In-Sidebar=true
 Kate-MDI-ToolView-kate_plugin_katesearch-Visible=false
+Kate-MDI-ToolView-kate_private_plugin_katefileselectorplugin-Position=0
+Kate-MDI-ToolView-kate_private_plugin_katefileselectorplugin-Show-Button-In-Sidebar=true
+Kate-MDI-ToolView-kate_private_plugin_katefileselectorplugin-Visible=false
 Kate-MDI-ToolView-kate_private_plugin_katefiletreeplugin-Position=0
 Kate-MDI-ToolView-kate_private_plugin_katefiletreeplugin-Show-Button-In-Sidebar=true
 Kate-MDI-ToolView-kate_private_plugin_katefiletreeplugin-Visible=false
 Kate-MDI-ToolView-kate_private_plugin_katekonsoleplugin-Position=3
 Kate-MDI-ToolView-kate_private_plugin_katekonsoleplugin-Show-Button-In-Sidebar=true
-Kate-MDI-ToolView-kate_private_plugin_katekonsoleplugin-Visible=true
+Kate-MDI-ToolView-kate_private_plugin_katekonsoleplugin-Visible=false
 Kate-MDI-ToolView-kateproject-Position=0
 Kate-MDI-ToolView-kateproject-Show-Button-In-Sidebar=true
 Kate-MDI-ToolView-kateproject-Visible=true
@@ -107,23 +90,23 @@ Kate-MDI-ToolView-kateprojectgit-Visible=false
 Kate-MDI-ToolView-kateprojectinfo-Position=3
 Kate-MDI-ToolView-kateprojectinfo-Show-Button-In-Sidebar=true
 Kate-MDI-ToolView-kateprojectinfo-Visible=false
-Kate-MDI-ToolView-lspclient_symbol_outline-Position=0
+Kate-MDI-ToolView-lspclient_symbol_outline-Position=1
 Kate-MDI-ToolView-lspclient_symbol_outline-Show-Button-In-Sidebar=true
 Kate-MDI-ToolView-lspclient_symbol_outline-Visible=false
 Kate-MDI-ToolView-output-Position=3
 Kate-MDI-ToolView-output-Show-Button-In-Sidebar=true
-Kate-MDI-ToolView-output-Visible=false
-Kate-MDI-V-Splitter=0,559,200
-State=AAAA/wAAAAD9AAAAAAAABkAAAAMbAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAIAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgEAAAAA/////wAAAAAAAAAAAAAAGABoAGEAbQBiAHUAcgBnAGUAcgBCAGEAcgEAAAIB/////wAAAAAAAAAA
+Kate-MDI-ToolView-output-Visible=true
+Kate-MDI-V-Splitter=0,591,185
+State=AAAA/wAAAAD9AAAAAAAABjwAAAMlAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAIAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgAAAAAA/////wAAAAAAAAAAAAAAGABoAGEAbQBiAHUAcgBnAGUAcgBCAGEAcgEAAAAA/////wAAAAAAAAAA
 ToolBarsMovable=Disabled
 eDP-1=eDP-1
 
 [MainWindow0 Settings]
-1600x900 screen: Height=873
-1600x900 screen: Width=1600
-1600x900 screen: XPosition=0
-1600x900 screen: YPosition=0
-State=AAAA/wAAAAD9AAAAAAAABkAAAAMbAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAIAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgEAAAAA/////wAAAAAAAAAAAAAAGABoAGEAbQBiAHUAcgBnAGUAcgBCAGEAcgEAAAIB/////wAAAAAAAAAA
+1600x900 screen: Height=845
+1600x900 screen: Width=1596
+1600x900 screen: XPosition=2
+1600x900 screen: YPosition=26
+State=AAAA/wAAAAD9AAAAAAAABjwAAAMlAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAIAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgAAAAAA/////wAAAAAAAAAAAAAAGABoAGEAbQBiAHUAcgBnAGUAcgBCAGEAcgEAAAAA/////wAAAAAAAAAA
 ToolBarsMovable=Disabled
 WindowState=8
 eDP-1=eDP-1
@@ -131,45 +114,43 @@ eDP-1=eDP-1
 [MainWindow0-Splitter 0]
 Children=MainWindow0-ViewSpace 0
 Orientation=1
-Sizes=1388
+Sizes=1352
 
 [MainWindow0-ViewSpace 0]
-Active View=file:///home/chelmi/old/.config/i3/config
-Count=3
-Documents=file:///home/chelmi/old/.config/i3/i3blocks.conf,file:///home/chelmi/old/.config/i3/i3blocks/bright.sh,file:///home/chelmi/old/.config/i3/config
-View 0=file:///home/chelmi/old/.config/i3/i3blocks.conf
-View 1=file:///home/chelmi/old/.config/i3/i3blocks/bright.sh
-View 2=file:///home/chelmi/old/.config/i3/config
+Active View=file:///home/chelmi/.config/i3/brightness/brightness.sh
+Count=1
+Documents=file:///home/chelmi/.config/i3/brightness/brightness.sh
+View 0=file:///home/chelmi/.config/i3/brightness/brightness.sh
 
-[MainWindow0-ViewSpace 0 file:///home/chelmi/old/.config/i3/config]
-CursorColumn=105
-CursorLine=252
+[MainWindow0-ViewSpace 0 file:///home/chelmi/.config/i3/brightness/brightness.sh]
+CursorColumn=40
+CursorLine=18
 Dynamic Word Wrap=true
 JumpList=
-TextFolding={"checksum":"703d354227fdbe4cc1c6825e7b63b6acdc76f552","ranges":[]}
-ViMarks=
-
-[MainWindow0-ViewSpace 0 file:///home/chelmi/old/.config/i3/i3blocks.conf]
-CursorColumn=37
-CursorLine=63
-Dynamic Word Wrap=true
-JumpList=
-TextFolding={"checksum":"51c723b19930bf4cbb2dc8705f1f575d43808af5","ranges":[]}
-ViMarks=
-
-[MainWindow0-ViewSpace 0 file:///home/chelmi/old/.config/i3/i3blocks/bright.sh]
-CursorColumn=0
-CursorLine=6
-Dynamic Word Wrap=true
-JumpList=
-TextFolding={"checksum":"16b8e337128d22c6fb5d8984a9efce88825a830d","ranges":[]}
+TextFolding={"checksum":"5adce73b50b0a635aa2e26a89a69bbb14c8ccb11","ranges":[]}
 ViMarks=
 
 [Open Documents]
-Count=3
+Count=1
 
 [Open MainWindows]
 Count=1
+
+[Plugin:katefilebrowserplugin:MainWindow:0]
+Allow Expansion=false
+Decoration position=2
+Show Inline Previews=true
+Show Preview=false
+Show hidden files=false
+Sort by=Name
+Sort directories first=true
+Sort hidden files last=false
+Sort reversed=true
+View Style=DetailTree
+auto sync folder=false
+filter history=
+highlight current file=true
+location=file:///home/chelmi/Downloads
 
 [Plugin:kateprojectplugin:]
 projects=
@@ -198,21 +179,17 @@ SearchDiskFiless=
 UseRegExp=false
 
 [Recent Files]
-File1[$e]=$HOME/old/gh_token.txt
-File2[$e]=$HOME/chelmi/.config/i3
-File3[$e]=$HOME
-File4[$e]=$HOME/.config/trashrc
-File5[$e]=/run/media/chelmi/KINGSTON/chelmi/.bashrc
-File6[$e]=$HOME/old/.config/i3
-File7[$e]=$HOME/old/.config/i3/i3blocks.conf
-File8[$e]=$HOME/old/.config/i3/i3blocks/bright.sh
-File9[$e]=$HOME/old/.config/i3/config
-Name1[$e]=gh_token.txt
-Name2[$e]=i3
-Name3[$e]=chelmi
-Name4[$e]=trashrc
-Name5[$e]=.bashrc
+File1[$e]=$HOME/Downloads/lab-sec/src/main/java/es/upm/dit/isst/labsec/LabSecApplication.java
+File2[$e]=$HOME/Downloads/lab-sec/src/main/java/es/upm/dit/isst/labsec/controller/LabController.java
+File3[$e]=$HOME/Downloads/lab-sec/src/main/java/es/upm/dit/isst/labsec/config/SecurityConfig.java
+File4[$e]=$HOME/Universidad/ISST/Trabajo/3DHub/backend/src/main/java/com/dhub/backend/BackendApplication.java
+File5[$e]=$HOME/Downloads/ubuntu_script.txt
+File6[$e]=$HOME/.config/i3
+File7[$e]=$HOME/.config/i3/brightness/brightness.sh
+Name1[$e]=LabSecApplication.java
+Name2[$e]=LabController.java
+Name3[$e]=SecurityConfig.java
+Name4[$e]=BackendApplication.java
+Name5[$e]=ubuntu_script.txt
 Name6[$e]=i3
-Name7[$e]=i3blocks.conf
-Name8[$e]=bright.sh
-Name9[$e]=config
+Name7[$e]=brightness.sh

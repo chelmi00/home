@@ -1,15 +1,10 @@
+alias sudo='sudo '
+alias ld='ls -d */'
+alias lf='ls *.?*'
 alias ls='ls -p --color=auto'
-alias grep='grep --colour=auto'
-alias egrep='egrep --colour=auto'
-alias fgrep='fgrep --colour=auto'
-
-alias mv='mv -i'	# confirm before overwriting something
-alias cp='cp -i'	# confirm before overwriting something
-alias df='df -h'	# human-readable sizes
-alias free='free -m'	# show sizes in MB
-
-alias pacman_ar='sudo pacman -Rcs $(pacman -Qdtg)'
-
-alias urgent_sim='wmctrl -r :SELECT: -b add,demands_attention'
-
-alias v='vim'
+alias la='ls -A'
+alias agu='sudo apt update && sudo apt upgrade -y'
+alias agf='sudo apt full-upgrade && sudo apt dist-upgrade'
+alias agc='sudo apt clean && sudo apt autoremove -y'
+alias 3dhub='./mvnw clean install spring-boot:run -DskipTests=true'
+alias clear_cache="sudo sh -c 'echo 1 >/proc/sys/vm/drop_caches' && sudo sh -c 'echo 2 >/proc/sys/vm/drop_caches' && sudo sh -c 'echo 3 >/proc/sys/vm/drop_caches'"

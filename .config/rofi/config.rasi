@@ -6,7 +6,7 @@
 
 * {
     bg-color:                    #2f343fd9;
-    text-color:                  #1ba188ff;
+    text-color:                  #00ff00ff;
     inactive-text-color:         #777e8dff;
     urgent-text-color:           #f0f8ffff;
     highlight-text-color:        #ffffffff;
