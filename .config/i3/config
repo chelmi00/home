@@ -22,9 +22,7 @@ set $mod Mod4
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
 #font pango:DejaVu Sans Mono 8
 
-# font pango:System San Francisco Display 11
-font pango:Symbols Nerd Font Mono 11
-# font pango:UbuntuMono Nerd Font Propo 11
+font pango:JetBrainsMono Nerd Font Propo 11
 
 # Start XDG autostart .desktop files using dex. See also
 # https://wiki.archlinux.org/index.php/XDG_Autostart
@@ -117,26 +115,18 @@ bindsym $mod+a focus parent
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-#            
-set $ws1 "1: $"
-# set $ws2 "2: "
-set $ws2 "2: "
-# set $ws2 "2: "
-set $ws3 "3: "
-set $ws4 "4: "
-set $ws5 "5: "
-set $ws6 "6: "
-#set $ws7 "7: 🦁"
-set $ws7 "7: "
-#set $ws7 "7: "
-#set $ws7 "7: "
-set $ws8 "8: "
-#set $ws8 "8: "
-#set $ws8 "8: "
-# set $ws9 "9: "
+# https://www.nerdfonts.com/cheat-sheet
+#   󱢴             󰖣 󰨞      
+set $ws1 "1: "
+set $ws2 "2: "
+set $ws3 "3: 󱢴"
+set $ws4 "4: 󰨞"
+set $ws5 "5: "
+set $ws6 "6: "
+set $ws7 "7: "
+set $ws8 "8: 󰖣"
 set $ws9 "9: "
-# set $ws10 "10: "
-set $ws10 "10: "
+set $ws10 "10: "
 
 # switch to workspace
 bindsym $mod+1 workspace number $ws1
