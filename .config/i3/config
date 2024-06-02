@@ -35,6 +35,8 @@ exec --no-startup-id dex --autostart --environment i3
 # screen before suspend. Use loginctl lock-session to lock your screen.
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock -c 337744 --nofork
 exec_always sh $HOME/.config/i3/lid/feh-lid.sh &
+exec_always xset s 300
+exec --no-startup-id $HOME/.config/i3/lock/idle.sh &
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
@@ -153,25 +155,26 @@ bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
 
 # open apps in workspaces
-assign [instance="^crx__dhgnpkpckbcggkdaekhefmcooaocfddi$"] $ws9
 assign [class="konsole"] $ws1
 assign [class="dev.warp.Warp"] $ws1
 assign [class="qutebrowser"] $ws2
 assign [class="dolphin"] $ws3
 assign [class="Code"] $ws4
 assign [class="kate"] $ws5
+assign [class="Evince"] $ws5
 assign [class="Mysql-workbench-bin"] $ws5
 assign [class="Cypress"] $ws6
-assign [class="Postman"] $ws6
+assign [class="okular"] $ws6
 assign [instance="microsoft-edge"] $ws7
 assign [class="firefox"] $ws7
 assign [class="Brave-browser"] $ws7
 assign [class="whatsdesk"] $ws8
 assign [class="Telegram"] $ws8
+assign [class="discord"] $ws9
 assign [class="thunderbird"] $ws9
-assign [instance="crx__dhgnpkpckbcggkdaekhefmcooaocfddi"] $ws9
-assign [class="Org.gnome.Epiphany.WebApp-notion-486af5da11b1d7b984dd0eec94e15310e479449f"] $ws9
-assign [class="eDEX-UI"] $ws10
+assign [class="eDEX-UI"] $ws9
+assign [instance="crx__cgnhohfnppfihkdpcccmmjnmlcbljcgp"] $ws10
+assign [instance="crx__dhgnpkpckbcggkdaekhefmcooaocfddi"] $ws10
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -275,12 +278,12 @@ bindsym Mod1+d exec rofi -show drun
 bindsym --release Caps_Lock exec pkill -SIGRTMIN+11 i3blocks
 
 # Run on start
-exec_always feh --bg-scale ~/LoImportante/General/Fotos/Linux/Ubuntu/ub_black.png
 exec_always xrandr --output eDP-1 --primary --mode 1600x900 --pos 0x0 --rotate normal --output DP-1 --off
 exec_always xrandr --output "$(xrandr | grep " connected" | awk '{print $1}')" --brightness $HOME/.config/i3/brightness/brightness_value.txt
 exec_always xdg-mime default org.kde.dolphin.desktop inode/directory
 exec_always klipper
 exec_always nm-applet &
+exec_always feh --bg-scale ~/LoImportante/General/Fotos/Linux/Ubuntu/ub_black.png
 exec redshift -o -b "$(cat $HOME/.config/i3/brightness/brightness_value.txt)":"$(cat $HOME/.config/i3/brightness/brightness_value.txt)" -l 40.441468:-3.628227 -t 6500:3500
 exec compton -f
 

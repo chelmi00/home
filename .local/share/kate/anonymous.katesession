@@ -1,12 +1,12 @@
 [Document 0]
 Bookmarks=
 Encoding=UTF-8
-Highlighting=Textile
+Highlighting=None
 Highlighting Set By User=false
 Indentation Mode=normal
-Mode=Textile
+Mode=Normal
 Mode Set By User=false
-URL=file:///home/chelmi/Downloads/Fonts/Meslo-Font-master/README.textile
+URL=
 
 [Kate Plugins]
 cmaketoolsplugin=false
@@ -42,28 +42,28 @@ tabswitcherplugin=true
 textfilterplugin=true
 
 [MainWindow0]
-1600x900 screen: Height=852
+1600x900 screen: Height=848
 1600x900 screen: Width=1596
 1600x900 screen: XPosition=2
-1600x900 screen: YPosition=22
+1600x900 screen: YPosition=24
 Active ViewSpace=0
 Kate-MDI-H-Splitter=0,1516,0
 Kate-MDI-Sidebar-0-Bar-0-TvList=kate_private_plugin_katefiletreeplugin,kateproject,kateprojectgit,kate_private_plugin_katefileselectorplugin
 Kate-MDI-Sidebar-0-LastSize=160
 Kate-MDI-Sidebar-0-SectSizes=0
-Kate-MDI-Sidebar-0-Splitter=787
+Kate-MDI-Sidebar-0-Splitter=778
 Kate-MDI-Sidebar-1-Bar-0-TvList=lspclient_symbol_outline
 Kate-MDI-Sidebar-1-LastSize=160
 Kate-MDI-Sidebar-1-SectSizes=0
-Kate-MDI-Sidebar-1-Splitter=787
+Kate-MDI-Sidebar-1-Splitter=778
 Kate-MDI-Sidebar-2-Bar-0-TvList=
 Kate-MDI-Sidebar-2-LastSize=160
 Kate-MDI-Sidebar-2-SectSizes=0
 Kate-MDI-Sidebar-2-Splitter=1516
 Kate-MDI-Sidebar-3-Bar-0-TvList=output,diagnostics,kate_plugin_katesearch,kateprojectinfo,kate_private_plugin_katekonsoleplugin
-Kate-MDI-Sidebar-3-LastSize=185
+Kate-MDI-Sidebar-3-LastSize=188
 Kate-MDI-Sidebar-3-SectSizes=0
-Kate-MDI-Sidebar-3-Splitter=1021
+Kate-MDI-Sidebar-3-Splitter=1167
 Kate-MDI-Sidebar-Style=2
 Kate-MDI-Sidebar-Visible=true
 Kate-MDI-ToolView-diagnostics-Position=3
@@ -96,17 +96,17 @@ Kate-MDI-ToolView-lspclient_symbol_outline-Visible=false
 Kate-MDI-ToolView-output-Position=3
 Kate-MDI-ToolView-output-Show-Button-In-Sidebar=true
 Kate-MDI-ToolView-output-Visible=true
-Kate-MDI-V-Splitter=0,598,185
-State=AAAA/wAAAAD9AAAAAAAABjwAAAMsAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAIAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgAAAAAA/////wAAAAAAAAAAAAAAGABoAGEAbQBiAHUAcgBnAGUAcgBCAGEAcgEAAAAA/////wAAAAAAAAAA
+Kate-MDI-V-Splitter=0,586,188
+State=AAAA/wAAAAD9AAAAAAAABjwAAAMlAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAIAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgAAAAAA/////wAAAAAAAAAAAAAAGABoAGEAbQBiAHUAcgBnAGUAcgBCAGEAcgEAAAAA/////wAAAAAAAAAA
 ToolBarsMovable=Disabled
 eDP-1=eDP-1
 
 [MainWindow0 Settings]
-1600x900 screen: Height=852
+1600x900 screen: Height=848
 1600x900 screen: Width=1596
 1600x900 screen: XPosition=2
-1600x900 screen: YPosition=22
-State=AAAA/wAAAAD9AAAAAAAABjwAAAMsAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAIAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgAAAAAA/////wAAAAAAAAAAAAAAGABoAGEAbQBiAHUAcgBnAGUAcgBCAGEAcgEAAAAA/////wAAAAAAAAAA
+1600x900 screen: YPosition=24
+State=AAAA/wAAAAD9AAAAAAAABjwAAAMlAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAIAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgAAAAAA/////wAAAAAAAAAAAAAAGABoAGEAbQBiAHUAcgBnAGUAcgBCAGEAcgEAAAAA/////wAAAAAAAAAA
 ToolBarsMovable=Disabled
 WindowState=8
 eDP-1=eDP-1
@@ -117,18 +117,9 @@ Orientation=1
 Sizes=1516
 
 [MainWindow0-ViewSpace 0]
-Active View=file:///home/chelmi/Downloads/Fonts/Meslo-Font-master/README.textile
+Active View=
 Count=1
-Documents=file:///home/chelmi/Downloads/Fonts/Meslo-Font-master/README.textile
-View 0=file:///home/chelmi/Downloads/Fonts/Meslo-Font-master/README.textile
-
-[MainWindow0-ViewSpace 0 file:///home/chelmi/Downloads/Fonts/Meslo-Font-master/README.textile]
-CursorColumn=0
-CursorLine=0
-Dynamic Word Wrap=true
-JumpList=
-TextFolding={"checksum":"cc24a4daf84d91a8dde1f3a3321da018929b01e3","ranges":[]}
-ViMarks=
+Documents=\\0
 
 [Open Documents]
 Count=1
@@ -179,19 +170,23 @@ SearchDiskFiless=
 UseRegExp=false
 
 [Recent Files]
-File1[$e]=$HOME/Downloads/lab-sec/src/main/java/es/upm/dit/isst/labsec/LabSecApplication.java
-File2[$e]=$HOME/Downloads/lab-sec/src/main/java/es/upm/dit/isst/labsec/controller/LabController.java
-File3[$e]=$HOME/Downloads/lab-sec/src/main/java/es/upm/dit/isst/labsec/config/SecurityConfig.java
-File4[$e]=$HOME/Universidad/ISST/Trabajo/3DHub/backend/src/main/java/com/dhub/backend/BackendApplication.java
-File5[$e]=$HOME/Downloads/ubuntu_script.txt
-File6[$e]=$HOME/.config/i3
-File7[$e]=$HOME/.config/i3/brightness/brightness.sh
-File8[$e]=$HOME/Downloads/Fonts/Meslo-Font-master/README.textile
-Name1[$e]=LabSecApplication.java
-Name2[$e]=LabController.java
-Name3[$e]=SecurityConfig.java
-Name4[$e]=BackendApplication.java
-Name5[$e]=ubuntu_script.txt
-Name6[$e]=i3
-Name7[$e]=brightness.sh
-Name8[$e]=README.textile
+File1[$e]=$HOME/Downloads/Fonts/Meslo-Font-master/README.textile
+File10[$e]=$HOME/.local/share/applications/msedge-notion.desktop
+File2[$e]=$HOME/Downloads/Desktop-Strippers/vlc-Convert.sh
+File3[$e]=$HOME/Downloads/Desktop-Strippers/xopengirl-0.1/Xopengirl.1
+File4[$e]=$HOME/Downloads/Desktop-Strippers/hot-babe/doc/config.example
+File5[$e]=$HOME/snap/whatsdesk/28/.config/fontconfig/fonts.conf
+File6[$e]=/snap/whatsdesk/28/desktop-common.sh
+File7[$e]=$HOME/isst
+File8[$e]=$HOME/.local/share/applications/msedge-trello.desktop
+File9[$e]=$HOME
+Name1[$e]=README.textile
+Name10[$e]=msedge-notion.desktop
+Name2[$e]=vlc-Convert.sh
+Name3[$e]=Xopengirl.1
+Name4[$e]=config.example
+Name5[$e]=fonts.conf
+Name6[$e]=desktop-common.sh
+Name7[$e]=isst
+Name8[$e]=msedge-trello.desktop
+Name9[$e]=chelmi
