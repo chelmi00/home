@@ -12,6 +12,7 @@ current_brightness=$(cat $HOME/.config/i3/brightness/brightness_value.txt)
 input=$1
 delta=$(echo "$input" | bc)
 
+# Divides the current brightness by the input
 target_brightness=$(echo "$current_brightness / $delta" | bc -l)
 
 # Set the brightness using xrandr
