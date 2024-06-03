@@ -1,14 +1,5 @@
 #!/bin/bash
 
-# # Check if input argument is provided
-# if [ -z "$1" ]; then
-#     echo "Error, missing argument"
-#     exit 1
-# fi
-
-# # Get the current brightness
-# current_brightness=$(xrandr --verbose --current | grep Brightness | awk '{print $2}')
-
 # Check if input argument is provided
 if [ -z "$1" ]; then
   echo "Error, missing argument"
