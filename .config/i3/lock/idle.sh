@@ -13,7 +13,7 @@ while true; do
         # Set the brightness to 10%
         $HOME/.config/i3/brightness/idle_brightness.sh 4
         while [ $IDLE_TIME -ge $IDLE_THRESHOLD ] && [ $IDLE_TIME -lt $LOCK_THRESHOLD ]; do
-            sleep .1
+            sleep .05
             IDLE_TIME=$(xprintidle | grep -o '[0-9]*' | head -n 1)
             # If the idle time is less than the idle threshold or greater than the lock threshold
             if [ $IDLE_TIME -le $IDLE_THRESHOLD ] || [ $IDLE_TIME -ge $LOCK_THRESHOLD ]; then

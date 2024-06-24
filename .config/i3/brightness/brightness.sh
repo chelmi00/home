@@ -29,6 +29,16 @@ elif (( $(echo "$target_brightness < 0" | bc -l) )); then
   target_brightness=0
 fi
 
+# If the target brightness is not a multiple of 0.05, round it to the nearest multiple
+extra=$(echo "($target_brightness * 100) % 5" | bc)
+if (( $(echo "$extra != 0" | bc -l) )); then
+  if (( $(echo "$delta < 0" | bc -l) )); then
+    target_brightness=$(echo "$target_brightness + ((5 - $extra) / 100)" | bc -l)
+  else
+    target_brightness=$(echo "$target_brightness - ($extra / 100)" | bc -l)
+  fi
+fi
+
 # Set the brightness using xrandr
 xrandr --output "$(xrandr | grep " connected" | awk '{print $1}')" --brightness "$target_brightness"
 
@@ -36,4 +46,6 @@ xrandr --output "$(xrandr | grep " connected" | awk '{print $1}')" --brightness 
 echo "$target_brightness" > $HOME/.config/i3/brightness/brightness_value.txt
 
 # Redshift gets stopped, so this reactivates it
-redshift -o -l 40.441468:-3.628227 -t 6500:3500
+if (( $(echo "$target_brightness < 1" | bc -l) )); then
+  redshift -o -l 40.441468:-3.628227 -t 6500:3500
+fi

@@ -8,8 +8,7 @@
 !/.config/dolphinrc
 !/.config/gtk-2.0
 !/.config/gtk-3.0
-!/.config/i3
-!/.config/i3status
+#!/.config/i3/*
 !/.config/kate
 !/.config/konsolerc
 !/.config/mimeapps.list
