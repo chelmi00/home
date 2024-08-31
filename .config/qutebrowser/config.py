@@ -140,12 +140,6 @@ config.set('content.images', True, 'chrome-devtools://*')
 # Type: Bool
 config.set('content.images', True, 'devtools://*')
 
-# Allow JavaScript to read from or write to the clipboard. With
-# QtWebEngine, writing the clipboard as response to a user interaction
-# is always allowed.
-# Type: Bool
-c.content.javascript.can_access_clipboard = True
-
 # Enable JavaScript.
 # Type: Bool
 config.set('content.javascript.enabled', True, 'chrome-devtools://*')
@@ -230,6 +224,23 @@ c.editor.command = ['alacritty', '-e', 'vim', '{file}']
 #   - external: Use an external command.
 c.fileselect.handler = 'external'
 
+# Command (and arguments) to use for selecting a single file in forms.
+# The command should write the selected file path to the specified file
+# or stdout. The following placeholders are defined: * `{}`: Filename of
+# the file to be written to. If not contained in any argument, the
+# standard output of the command is read instead.
+# Type: ShellCommand
+c.fileselect.single_file.command = ['gnome-terminal', '--', 'bash', '-c', 'ranger --choosefile={}']
+
+# Command (and arguments) to use for selecting multiple files in forms.
+# The command should write the selected file paths to the specified file
+# or to stdout, separated by newlines. The following placeholders are
+# defined: * `{}`: Filename of the file to be written to. If not
+# contained in any argument, the   standard output of the command is
+# read instead.
+# Type: ShellCommand
+c.fileselect.multiple_files.command = ['gnome-terminal', '--', 'bash', '-c', 'ranger --choosefiles={}']
+
 # CSS border value for hints.
 # Type: String
 c.hints.border = '1px solid #282a36'
@@ -238,10 +249,6 @@ c.hints.border = '1px solid #282a36'
 # after loading the page.
 # Type: Bool
 c.input.insert_mode.auto_load = True
-
-# Enter insert mode if an editable element is clicked.
-# Type: Bool
-c.input.insert_mode.auto_enter = False
 
 # When to show the statusbar.
 # Type: String
@@ -313,7 +320,7 @@ c.url.default_page = '~/.config/qutebrowser/src/homepage/homepage.html'
 # the search engine name to the search term, e.g. `:open google
 # qutebrowser`.
 # Type: Dict
-c.url.searchengines = {'DEFAULT': 'https://duckduckgo.com/?q={}', 'ggl': 'https://www.google.com/search?q={}', 'bng': 'https://www.bing.com/search?q={}', 'maps': 'https://google.com/maps/search/{}'}
+c.url.searchengines = {'DEFAULT': 'https://duckduckgo.com/?q={}', 'maps': 'https://google.com/maps/search/{}'}
 
 # Page(s) to open at the start.
 # Type: List of FuzzyUrl, or FuzzyUrl
@@ -380,31 +387,6 @@ c.colors.completion.scrollbar.fg = '#f8f8f2'
 # Color of the scrollbar in the completion view.
 # Type: QssColor
 c.colors.completion.scrollbar.bg = '#282a36'
-
-# Background color of the context menu. If set to null, the Qt default
-# is used.
-# Type: QssColor
-c.colors.contextmenu.menu.bg = None
-
-# Foreground color of the context menu. If set to null, the Qt default
-# is used.
-# Type: QssColor
-c.colors.contextmenu.menu.fg = None
-
-# Background color of the context menu's selected item. If set to null,
-# the Qt default is used.
-# Type: QssColor
-c.colors.contextmenu.selected.bg = None
-
-# Foreground color of the context menu's selected item. If set to null,
-# the Qt default is used.
-# Type: QssColor
-c.colors.contextmenu.selected.fg = None
-
-# Foreground color of disabled items in the context menu. If set to
-# null, the Qt default is used.
-# Type: QssColor
-c.colors.contextmenu.disabled.fg = None
 
 # Background color for the download bar.
 # Type: QssColor
@@ -659,23 +641,6 @@ c.colors.tabs.selected.even.fg = '#f8f8f2'
 # Type: QtColor
 c.colors.tabs.selected.even.bg = '#282a36'
 
-# Background color for webpages if unset (or empty to use the theme's
-# color).
-# Type: QtColor
-c.colors.webpage.bg = '#aaaaaa'
-
-# Value to use for `prefers-color-scheme:` for websites. The "light"
-# value is only available with QtWebEngine 5.15.2+. On older versions,
-# it is the same as "auto". The "auto" value is broken on QtWebEngine
-# 5.15.2 due to a Qt bug. There, it will fall back to "light"
-# unconditionally.
-# Type: String
-# Valid values:
-#   - auto: Use the system-wide color scheme setting.
-#   - light: Force a light theme.
-#   - dark: Force a dark theme.
-c.colors.webpage.preferred_color_scheme = 'dark'
-
 # Render all web contents using a dark theme. Example configurations
 # from Chromium's `chrome://flags`:  - "With simple HSL/CIELAB/RGB-based
 # inversion": Set   `colors.webpage.darkmode.algorithm` accordingly.  -
@@ -686,23 +651,7 @@ c.colors.webpage.preferred_color_scheme = 'dark'
 # `colors.webpage.darkmode.threshold.background` to 205.  - "With
 # selective inversion of everything": Combines the two variants   above.
 # Type: Bool
-c.colors.webpage.darkmode.enabled = False
-
-# Which algorithm to use for modifying how colors are rendered with
-# darkmode. The `lightness-cielab` value was added with QtWebEngine 5.14
-# and is treated like `lightness-hsl` with older QtWebEngine versions.
-# Type: String
-# Valid values:
-#   - lightness-cielab: Modify colors by converting them to CIELAB color space and inverting the L value. Not available with Qt < 5.14.
-#   - lightness-hsl: Modify colors by converting them to the HSL color space and inverting the lightness (i.e. the "L" in HSL).
-#   - brightness-rgb: Modify colors by subtracting each of r, g, and b from their maximum value.
-c.colors.webpage.darkmode.algorithm = 'lightness-cielab'
-
-# Contrast for dark mode. This only has an effect when
-# `colors.webpage.darkmode.algorithm` is set to `lightness-hsl` or
-# `brightness-rgb`.
-# Type: Float
-c.colors.webpage.darkmode.contrast = 0.0
+c.colors.webpage.darkmode.enabled = True
 
 # Which images to apply dark mode to. With QtWebEngine 5.15.0, this
 # setting can cause frequent renderer process crashes due to a
@@ -715,48 +664,14 @@ c.colors.webpage.darkmode.contrast = 0.0
 #   - smart: Apply dark mode based on image content. Not available with Qt 5.15.0.
 c.colors.webpage.darkmode.policy.images = 'never'
 
-# Which pages to apply dark mode to. The underlying Chromium setting has
-# been removed in QtWebEngine 5.15.3, thus this setting is ignored
-# there. Instead, every element is now classified individually.
-# Type: String
-# Valid values:
-#   - always: Apply dark mode filter to all frames, regardless of content.
-#   - smart: Apply dark mode filter to frames based on background color.
-c.colors.webpage.darkmode.policy.page = 'smart'
-
-# Threshold for inverting text with dark mode. Text colors with
-# brightness below this threshold will be inverted, and above it will be
-# left as in the original, non-dark-mode page. Set to 256 to always
-# invert text color or to 0 to never invert text color.
-# Type: Int
-c.colors.webpage.darkmode.threshold.text = 150
-
-# Threshold for inverting background elements with dark mode. Background
-# elements with brightness above this threshold will be inverted, and
-# below it will be left as in the original, non-dark-mode page. Set to
-# 256 to never invert the color or to 0 to always invert it. Note: This
-# behavior is the opposite of `colors.webpage.darkmode.threshold.text`!
-# Type: Int
-c.colors.webpage.darkmode.threshold.background = 205
-
-# Code Select
-c.hints.selectors["code"] = [
-    # Selects all code tags whose direct parent is not a pre tag
-    ":not(pre) > code",
-    "pre"
-]
-
 # Bindings for normal mode
-config.bind('F', 'hint links spawn --detach qutebrowser {hint-url}') # Open link in new tab
-config.bind('J', 'tab-prev')
-config.bind('K', 'tab-next')
-config.bind('W', 'hint links spawn mpv {hint-url}') # Open video in mpv
+config.bind('W', 'hint links spawn mpv {hint-url}')
 config.bind('cc', 'yank selection')
-config.bind('tt', ':open -t')
+config.bind('ct', 'hint links spawn --detach xdotool click 1')
 config.bind('pg', 'spawn --userscript qute-bitwarden')
-config.bind('pm', 'spawn --userscript shortcuts i')
+config.bind('pm', 'spawn --userscript shortcuts')
 config.bind('sp', 'spawn --userscript save_page.py {url}')
-config.bind('cf', 'hint code userscript code_select.py')
+config.bind('tt', ':open -t')
 config.bind('xx', 'config-cycle statusbar.show always never;; config-cycle tabs.show multiple never')
 
 # Bindings for insert mode

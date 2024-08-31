@@ -6,7 +6,5 @@
 
 config_version: 2
 settings:
-  statusbar.show:
-    global: always
-  tabs.show:
-    global: multiple
+  colors.webpage.preferred_color_scheme:
+    global: auto
