@@ -15,6 +15,7 @@ x-scheme-handler/https=org.qutebrowser.qutebrowser.desktop;firefox-esr.desktop;u
 x-scheme-handler/mailto=thunderbird.desktop;
 x-scheme-handler/tel=org.kde.kdeconnect.handler.desktop;
 x-scheme-handler/trash=xfce4-file-manager.desktop;
+x-scheme-handler/tonsite=org.telegram.desktop._dc5c22ffb3e0d6c51d01d93b8cb37d29.desktop;
 
 [Default Applications]
 application/x-extension-htm=userapp-Firefox-TZ6751.desktop
@@ -39,6 +40,7 @@ x-scheme-handler/tel=org.kde.kdeconnect.handler.desktop;
 x-scheme-handler/trash=xfce4-file-manager.desktop
 x-scheme-handler/unknown=org.qutebrowser.qutebrowser.desktop
 html=qutebrowser.desktop
+x-scheme-handler/tonsite=org.telegram.desktop._dc5c22ffb3e0d6c51d01d93b8cb37d29.desktop
 
 [Removed Associations]
 inode/directory=org.kde.dolphin.desktop;
