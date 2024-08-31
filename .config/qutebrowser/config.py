@@ -665,6 +665,9 @@ c.colors.webpage.darkmode.enabled = True
 c.colors.webpage.darkmode.policy.images = 'never'
 
 # Bindings for normal mode
+config.bind('F', 'hint links spawn --detach qutebrowser {hint-url}') # Open link in new tab
+config.bind('J', 'tab-prev')
+config.bind('K', 'tab-next')
 config.bind('W', 'hint links spawn mpv {hint-url}')
 config.bind('cc', 'yank selection')
 config.bind('ct', 'hint links spawn --detach xdotool click 1')
