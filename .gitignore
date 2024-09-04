@@ -39,6 +39,11 @@
 !.gitignore
 !.installation
 
+# Bitwarden
+!/.bitwarden
+!/.bitwarden/*
+/.bitwarden/*.AppImage
+
 #/*
 #!/.config
 #/.config/*

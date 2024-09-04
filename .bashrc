@@ -158,3 +158,4 @@ export BW_CLIENTSECRET="OJrFFCTLxxe7NF6oDs91ki66qacFO9"
 export BW_SESSION="B/koX52A8LzTUh1rfIvrK2UrtLFV+V2/eYFlOtaLKsEV3ee8K5Jw8eXkiSzyhxEt4/wNl92q9TEpjPPm9bGUQA=="
 
 
+. "$HOME/.cargo/env"
