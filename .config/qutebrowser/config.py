@@ -140,6 +140,12 @@ config.set('content.images', True, 'chrome-devtools://*')
 # Type: Bool
 config.set('content.images', True, 'devtools://*')
 
+# Allow JavaScript to read from or write to the clipboard. With
+# QtWebEngine, writing the clipboard as response to a user interaction
+# is always allowed.
+# Type: Bool
+c.content.javascript.can_access_clipboard = True
+
 # Enable JavaScript.
 # Type: Bool
 config.set('content.javascript.enabled', True, 'chrome-devtools://*')
@@ -244,6 +250,11 @@ c.fileselect.multiple_files.command = ['gnome-terminal', '--', 'bash', '-c', 'ra
 # CSS border value for hints.
 # Type: String
 c.hints.border = '1px solid #282a36'
+
+# CSS selectors used to determine which elements on a page should have
+# hints.
+# Type: Dict
+c.hints.selectors = {'all': ['a', 'area', 'textarea', 'select', 'input:not([type="hidden"])', 'button', 'frame', 'iframe', 'img', 'link', 'summary', '[contenteditable]:not([contenteditable="false"])', '[onclick]', '[onmousedown]', '[role="link"]', '[role="option"]', '[role="button"]', '[role="tab"]', '[role="checkbox"]', '[role="menuitem"]', '[role="menuitemcheckbox"]', '[role="menuitemradio"]', '[ng-click]', '[ngClick]', '[data-ng-click]', '[x-ng-click]', '[tabindex]:not([tabindex="-1"])'], 'links': ['a[href]', 'area[href]', 'link[href]', '[role="link"][href]'], 'images': ['img'], 'media': ['audio', 'img', 'video'], 'url': ['[src]', '[href]'], 'inputs': ['input[type="text"]', 'input[type="date"]', 'input[type="datetime-local"]', 'input[type="email"]', 'input[type="month"]', 'input[type="number"]', 'input[type="password"]', 'input[type="search"]', 'input[type="tel"]', 'input[type="time"]', 'input[type="url"]', 'input[type="week"]', 'input:not([type])', '[contenteditable]:not([contenteditable="false"])', 'textarea'], 'code': [':not(pre) > code', 'pre']}
 
 # Automatically enter insert mode if an editable element is focused
 # after loading the page.
@@ -665,15 +676,16 @@ c.colors.webpage.darkmode.enabled = True
 c.colors.webpage.darkmode.policy.images = 'never'
 
 # Bindings for normal mode
-config.bind('F', 'hint links spawn --detach qutebrowser {hint-url}') # Open link in new tab
+config.bind('F', 'hint links spawn --detach qutebrowser {hint-url}')
 config.bind('J', 'tab-prev')
 config.bind('K', 'tab-next')
 config.bind('W', 'hint links spawn mpv {hint-url}')
 config.bind('cc', 'yank selection')
+config.bind('cf', 'hint code userscript code_select.py')
 config.bind('ct', 'hint links spawn --detach xdotool click 1')
 config.bind('pg', 'spawn --userscript qute-bitwarden')
 config.bind('pm', 'spawn --userscript shortcuts')
-config.bind('sp', 'spawn --userscript save_page.py {url}')
+config.bind('ps', 'spawn --userscript save_page.py {url}')
 config.bind('tt', ':open -t')
 config.bind('xx', 'config-cycle statusbar.show always never;; config-cycle tabs.show multiple never')
 
