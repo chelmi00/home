@@ -32,6 +32,8 @@ Recent URLs[$e]=file:$HOME/Downloads/,file:$HOME/,file:$HOME/Downloads/tdsñ/
 detailViewIconSize=16
 
 [KPropertiesDialog]
+1600x900 screen: Height=670
+1600x900 screen: Width=605
 eDP-1 Height 1440x810=616
 eDP-1 Height 1600x900=452
 eDP-1 Width 1440x810=438
