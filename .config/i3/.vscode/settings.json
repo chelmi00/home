@@ -1,6 +1,0 @@
-{
-    "shellcheck.ignorePatterns": {
-        "**/*.sh": true,
-        "config": true
-    }
-}
