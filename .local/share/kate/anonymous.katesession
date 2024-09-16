@@ -1,12 +1,12 @@
 [Document 0]
 Bookmarks=
 Encoding=UTF-8
-Highlighting=INI Files
+Highlighting=None
 Highlighting Set By User=false
 Indentation Mode=normal
-Mode=INI Files
+Mode=Normal
 Mode Set By User=false
-URL=file:///home/chelmi/.config/gtk-3.0/settings.ini
+URL=file:///home/chelmi/.local/share/kate/anonymous.katesession
 
 [Kate Plugins]
 cmaketoolsplugin=false
@@ -63,7 +63,7 @@ Kate-MDI-Sidebar-2-Splitter=1516
 Kate-MDI-Sidebar-3-Bar-0-TvList=output,diagnostics,kate_plugin_katesearch,kateprojectinfo,kate_private_plugin_katekonsoleplugin
 Kate-MDI-Sidebar-3-LastSize=188
 Kate-MDI-Sidebar-3-SectSizes=0
-Kate-MDI-Sidebar-3-Splitter=1040
+Kate-MDI-Sidebar-3-Splitter=1067
 Kate-MDI-Sidebar-Style=2
 Kate-MDI-Sidebar-Visible=true
 Kate-MDI-ToolView-diagnostics-Position=3
@@ -117,25 +117,17 @@ Orientation=1
 Sizes=1516
 
 [MainWindow0-ViewSpace 0]
-Active View=file:///home/chelmi/.config/gtk-3.0/settings.ini
+Active View=file:///home/chelmi/.local/share/kate/anonymous.katesession
 Count=1
-Documents=file:///home/chelmi/.config/gtk-3.0/settings.ini
-View 0=file:///home/chelmi/.config/gtk-3.0/settings.ini
+Documents=file:///home/chelmi/.local/share/kate/anonymous.katesession
+View 0=file:///home/chelmi/.local/share/kate/anonymous.katesession
 
-[MainWindow0-ViewSpace 0 file:///home/chelmi/.config/gtk-3.0/settings.ini]
+[MainWindow0-ViewSpace 0 file:///home/chelmi/.local/share/kate/anonymous.katesession]
 CursorColumn=0
 CursorLine=0
 Dynamic Word Wrap=true
 JumpList=
-TextFolding={"checksum":"6743548a4a4a0efde1b08c67f441e8077e56f0c3","ranges":[]}
-ViMarks=
-
-[MainWindow0-ViewSpace 0 file:///home/chelmi/.kde/share/config/kdeglobals]
-CursorColumn=0
-CursorLine=0
-Dynamic Word Wrap=true
-JumpList=
-TextFolding={"checksum":"eaa2cfde1d0fac68d7c83fbeeeeaa97b21c24551","ranges":[]}
+TextFolding={"checksum":"c924e0fd14dc7bbb6f52d8ac424f4b7c92436385","ranges":[]}
 ViMarks=
 
 [Open Documents]
@@ -187,23 +179,23 @@ SearchDiskFiless=
 UseRegExp=false
 
 [Recent Files]
-File1[$e]=$HOME/Downloads/Wearable-Interval-Timer-release.0.53/app/src/google-services.json
-File10[$e]=$HOME/.config/gtk-3.0/settings.ini
-File2[$e]=/etc/fstab
-File3[$e]=$HOME
-File4[$e]=$HOME/archivos/myFiles/eBook/AA.Libros/libros.sh
-File5[$e]=$HOME/archivos/myFiles/save/install.txt
-File6[$e]=$HOME/LoImportante/General/A.Relevant/anxiety_relief.txt
-File7[$e]=$HOME/LoImportante/General/A.Relevant/training.txt
-File8[$e]=$HOME/.config/i3/lock/idle.sh
-File9[$e]=$HOME/.config/i3/lock/lock.sh
-Name1[$e]=google-services.json
-Name10[$e]=settings.ini
-Name2[$e]=fstab
-Name3[$e]=chelmi
-Name4[$e]=libros.sh
-Name5[$e]=install.txt
-Name6[$e]=anxiety_relief.txt
-Name7[$e]=training.txt
-Name8[$e]=idle.sh
-Name9[$e]=lock.sh
+File1[$e]=$HOME
+File10[$e]=$HOME/.local/share/kate/anonymous.katesession
+File2[$e]=$HOME/archivos/myFiles/eBook/AA.Libros/libros.sh
+File3[$e]=$HOME/archivos/myFiles/save/install.txt
+File4[$e]=$HOME/LoImportante/General/A.Relevant/anxiety_relief.txt
+File5[$e]=$HOME/LoImportante/General/A.Relevant/training.txt
+File6[$e]=$HOME/.config/i3/lock/idle.sh
+File7[$e]=$HOME/.config/i3/lock/lock.sh
+File8[$e]=$HOME/.config/gtk-3.0/settings.ini
+File9[$e]=/usr/bin/bitwarden
+Name1[$e]=chelmi
+Name10[$e]=anonymous.katesession
+Name2[$e]=libros.sh
+Name3[$e]=install.txt
+Name4[$e]=anxiety_relief.txt
+Name5[$e]=training.txt
+Name6[$e]=idle.sh
+Name7[$e]=lock.sh
+Name8[$e]=settings.ini
+Name9[$e]=bitwarden

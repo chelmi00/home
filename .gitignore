@@ -30,6 +30,7 @@
 !/.local/share/dolphin
 !/.local/share/kate
 !/.local/share/konsole
+.local/share/kate/anonymous.katesession
 
 # Under home
 !.bashrc
@@ -52,7 +53,7 @@
 /.bitwarden/*.AppImage
 
 # I3 ignore everything
-.config/i3/*
+/.config/i3/*
 
 # Ignore cache
 *cache*
