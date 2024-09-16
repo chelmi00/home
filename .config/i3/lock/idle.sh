@@ -23,7 +23,8 @@ while true; do
             # If the idle time surpasses the lock threshold
             if [ $IDLE_TIME -ge $LOCK_THRESHOLD ]; then
                 # Lock the screen
-                i3lock -i /home/chelmi/LoImportante/General/Fotos/Linux/Linux/Edits/lock.png
+                #i3lock -i /home/chelmi/LoImportante/General/Fotos/Linux/Linux/Edits/lock.png
+                i3lock -i $HOME/.config/i3/lock/lock.png
             fi
         done
     fi

@@ -22,6 +22,7 @@
 !/.config/warp-terminal
 
 # KDE configurations
+!/.kde
 !/.local
 /.local/*
 !/.local/share
@@ -42,10 +43,19 @@
 !.gitignore
 !.installation
 
+# Binaries
+!/.local/bin
+
 # Bitwarden
 !/.bitwarden
 !/.bitwarden/*
 /.bitwarden/*.AppImage
+
+# I3 ignore everything
+.config/i3/*
+
+# Ignore cache
+*cache*
 
 #/*
 #!/.config

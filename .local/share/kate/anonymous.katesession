@@ -1,12 +1,12 @@
 [Document 0]
 Bookmarks=
 Encoding=UTF-8
-Highlighting=None
+Highlighting=INI Files
 Highlighting Set By User=false
 Indentation Mode=normal
-Mode=Normal
+Mode=INI Files
 Mode Set By User=false
-URL=
+URL=file:///home/chelmi/.config/gtk-3.0/settings.ini
 
 [Kate Plugins]
 cmaketoolsplugin=false
@@ -51,11 +51,11 @@ Kate-MDI-H-Splitter=0,1516,0
 Kate-MDI-Sidebar-0-Bar-0-TvList=kate_private_plugin_katefiletreeplugin,kateproject,kateprojectgit,kate_private_plugin_katefileselectorplugin
 Kate-MDI-Sidebar-0-LastSize=160
 Kate-MDI-Sidebar-0-SectSizes=0
-Kate-MDI-Sidebar-0-Splitter=778
+Kate-MDI-Sidebar-0-Splitter=777
 Kate-MDI-Sidebar-1-Bar-0-TvList=lspclient_symbol_outline
 Kate-MDI-Sidebar-1-LastSize=160
 Kate-MDI-Sidebar-1-SectSizes=0
-Kate-MDI-Sidebar-1-Splitter=778
+Kate-MDI-Sidebar-1-Splitter=777
 Kate-MDI-Sidebar-2-Bar-0-TvList=
 Kate-MDI-Sidebar-2-LastSize=160
 Kate-MDI-Sidebar-2-SectSizes=0
@@ -63,7 +63,7 @@ Kate-MDI-Sidebar-2-Splitter=1516
 Kate-MDI-Sidebar-3-Bar-0-TvList=output,diagnostics,kate_plugin_katesearch,kateprojectinfo,kate_private_plugin_katekonsoleplugin
 Kate-MDI-Sidebar-3-LastSize=188
 Kate-MDI-Sidebar-3-SectSizes=0
-Kate-MDI-Sidebar-3-Splitter=1149
+Kate-MDI-Sidebar-3-Splitter=1040
 Kate-MDI-Sidebar-Style=2
 Kate-MDI-Sidebar-Visible=true
 Kate-MDI-ToolView-diagnostics-Position=3
@@ -96,7 +96,7 @@ Kate-MDI-ToolView-lspclient_symbol_outline-Visible=false
 Kate-MDI-ToolView-output-Position=3
 Kate-MDI-ToolView-output-Show-Button-In-Sidebar=true
 Kate-MDI-ToolView-output-Visible=true
-Kate-MDI-V-Splitter=0,586,188
+Kate-MDI-V-Splitter=0,585,188
 State=AAAA/wAAAAD9AAAAAAAABjwAAAMlAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAIAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgAAAAAA/////wAAAAAAAAAAAAAAGABoAGEAbQBiAHUAcgBnAGUAcgBCAGEAcgEAAAAA/////wAAAAAAAAAA
 ToolBarsMovable=Disabled
 eDP-1=eDP-1
@@ -117,9 +117,26 @@ Orientation=1
 Sizes=1516
 
 [MainWindow0-ViewSpace 0]
-Active View=
+Active View=file:///home/chelmi/.config/gtk-3.0/settings.ini
 Count=1
-Documents=\\0
+Documents=file:///home/chelmi/.config/gtk-3.0/settings.ini
+View 0=file:///home/chelmi/.config/gtk-3.0/settings.ini
+
+[MainWindow0-ViewSpace 0 file:///home/chelmi/.config/gtk-3.0/settings.ini]
+CursorColumn=0
+CursorLine=0
+Dynamic Word Wrap=true
+JumpList=
+TextFolding={"checksum":"6743548a4a4a0efde1b08c67f441e8077e56f0c3","ranges":[]}
+ViMarks=
+
+[MainWindow0-ViewSpace 0 file:///home/chelmi/.kde/share/config/kdeglobals]
+CursorColumn=0
+CursorLine=0
+Dynamic Word Wrap=true
+JumpList=
+TextFolding={"checksum":"eaa2cfde1d0fac68d7c83fbeeeeaa97b21c24551","ranges":[]}
+ViMarks=
 
 [Open Documents]
 Count=1
@@ -170,23 +187,23 @@ SearchDiskFiless=
 UseRegExp=false
 
 [Recent Files]
-File1[$e]=$HOME/Downloads/Desktop-Strippers/xopengirl-0.1/Xopengirl.1
-File10[$e]=$HOME/Downloads/Wearable-Interval-Timer-release.0.53/app/src/google-services.json
-File2[$e]=$HOME/Downloads/Desktop-Strippers/hot-babe/doc/config.example
-File3[$e]=$HOME/snap/whatsdesk/28/.config/fontconfig/fonts.conf
-File4[$e]=/snap/whatsdesk/28/desktop-common.sh
-File5[$e]=$HOME/isst
-File6[$e]=$HOME/.local/share/applications/msedge-trello.desktop
-File7[$e]=$HOME
-File8[$e]=$HOME/.local/share/applications/msedge-notion.desktop
-File9[$e]=$HOME/Downloads/android-studio/Install-Linux-tar.txt
-Name1[$e]=Xopengirl.1
-Name10[$e]=google-services.json
-Name2[$e]=config.example
-Name3[$e]=fonts.conf
-Name4[$e]=desktop-common.sh
-Name5[$e]=isst
-Name6[$e]=msedge-trello.desktop
-Name7[$e]=chelmi
-Name8[$e]=msedge-notion.desktop
-Name9[$e]=Install-Linux-tar.txt
+File1[$e]=$HOME/Downloads/Wearable-Interval-Timer-release.0.53/app/src/google-services.json
+File10[$e]=$HOME/.config/gtk-3.0/settings.ini
+File2[$e]=/etc/fstab
+File3[$e]=$HOME
+File4[$e]=$HOME/archivos/myFiles/eBook/AA.Libros/libros.sh
+File5[$e]=$HOME/archivos/myFiles/save/install.txt
+File6[$e]=$HOME/LoImportante/General/A.Relevant/anxiety_relief.txt
+File7[$e]=$HOME/LoImportante/General/A.Relevant/training.txt
+File8[$e]=$HOME/.config/i3/lock/idle.sh
+File9[$e]=$HOME/.config/i3/lock/lock.sh
+Name1[$e]=google-services.json
+Name10[$e]=settings.ini
+Name2[$e]=fstab
+Name3[$e]=chelmi
+Name4[$e]=libros.sh
+Name5[$e]=install.txt
+Name6[$e]=anxiety_relief.txt
+Name7[$e]=training.txt
+Name8[$e]=idle.sh
+Name9[$e]=lock.sh
