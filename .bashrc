@@ -127,3 +127,7 @@ export BW_CLIENTID="user.5474947a-59d6-4b15-b406-b046009041c5"
 export BW_CLIENTSECRET="OJrFFCTLxxe7NF6oDs91ki66qacFO9"
 
 export GTK_THEME=Adapta-Nokto-Eta-Maia
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
