@@ -2,6 +2,7 @@
 # ~/.bashrc
 #
 
+# If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
 colors() {
@@ -31,24 +32,7 @@ colors() {
 	done
 }
 
-hex_to_dec() {
-    hex_color="$1"
-    if [[ $hex_color == \#* ]]; then
-        hex_color=${hex_color:1}
-    fi
-    r=$((16#${hex_color:0:2}))
-    g=$((16#${hex_color:2:2}))
-    b=$((16#${hex_color:4:2}))
-    echo "\[\e[38;2;${r};${g};${b}m\]"
-}
-
 [ -r /usr/share/bash-completion/bash_completion ] && . /usr/share/bash-completion/bash_completion
-if [ -f ~/.bash_aliases ]; then
-    source ~/.bash_aliases
-fi
-if [ -f ~/.bash_profile ]; then
-    source ~/.bash_profile
-fi
 
 # Change the window title of X terminals
 case ${TERM} in
@@ -63,9 +47,10 @@ esac
 use_color=true
 
 # Set colorful PS1 only on colorful terminals.
-# dircolors --print-database uses its own built-in database instead of using /etc/DIR_COLORS.  Try to use the external file first to take advantage of user additions.  Use internal bash globbing instead of external grep binary.
-# \u user; \h pc name; \W and \w workspace; \$ dollar sign;
-# 256-color Mode: \e[38;2;r;g;bm - foreground; \e[48;2;r;g;bm - background
+# dircolors --print-database uses its own built-in database
+# instead of using /etc/DIR_COLORS.  Try to use the external file
+# first to take advantage of user additions.  Use internal bash
+# globbing instead of external grep binary.
 safe_term=${TERM//[^[:alnum:]]/?}   # sanitize TERM
 match_lhs=""
 [[ -f ~/.dir_colors   ]] && match_lhs="${match_lhs}$(<~/.dir_colors)"
@@ -88,13 +73,13 @@ if ${use_color} ; then
 	if [[ ${EUID} == 0 ]] ; then
 		PS1='\[\033[01;31m\][\h\[\033[01;36m\] \W\[\033[01;31m\]]\$\[\033[00m\] '
 	else
-		pc_user=$(hex_to_dec '#16A085')
-		wd=$(hex_to_dec '#F6A085')
-		dollar=$(hex_to_dec '#16A0C5')
-		input=$(hex_to_dec '#F9FAF9')
-		PS1="${pc_user}\u@\h ${wd}\w ${dollar}\$ ${input}"
+		PS1='\[\033[01;32m\][\u@\h\[\033[01;37m\] \W\[\033[01;32m\]]\$\[\033[00m\] '
 	fi
 
+	alias ls='ls --color=auto'
+	alias grep='grep --colour=auto'
+	alias egrep='egrep --colour=auto'
+	alias fgrep='fgrep --colour=auto'
 else
 	if [[ ${EUID} == 0 ]] ; then
 		# show root@ when we don't have colors
@@ -106,28 +91,65 @@ fi
 
 unset use_color safe_term match_lhs sh
 
+#alias cp="cp -i"                          # confirm before overwriting something
+#alias df='df -h'                          # human-readable sizes
+#alias free='free -m'                      # show sizes in MB
+#alias np='nano -w PKGBUILD'
+#alias more=less
+
 xhost +local:root > /dev/null 2>&1
 
-# Bash won't get SIGWINCH if another process is in the foreground. Enable checkwinsize so that bash will check the terminal size when it regains control.  #65623
+# Bash won't get SIGWINCH if another process is in the foreground.
+# Enable checkwinsize so that bash will check the terminal size when
+# it regains control.  #65623
 # http://cnswww.cns.cwru.edu/~chet/bash/FAQ (E11)
 shopt -s checkwinsize
+
 shopt -s expand_aliases
+
+# export QT_SELECT=4
 
 # Enable history appending instead of overwriting.  #139609
 shopt -s histappend
 
-# # Environment Variables
-# export QT_QPA_PLATFORMTHEME=qt5ct
-# export TERM=xterm-256color
-# export LANG=en_US.UTF-8
-# export QT_SELECT=4
+if [ -f ~/.bash_aliases ]; then
+    . ~/.bash_aliases
+fi
+
+cl() { cd "$1" && ls -a; }
+copy() { xclip -sel c < "$1"; }
+buscar() { grep -IrnwH . -e "$1"; }
+# aex - archive extractor
+# usage: aex <file>
+aex () {
+	if [ -f $1 ] ; then
+                case $1 in
+                        *.tar.bz2)   tar xjf $1   ;;
+                        *.tar.gz)    tar xzf $1   ;;
+                        *.bz2)       bunzip2 $1   ;;
+                        *.rar)       unrar x $1     ;;
+                        *.gz)        gunzip $1    ;;
+                        *.tar)       tar xf $1    ;;
+                        *.tbz2)      tar xjf $1   ;;
+                        *.tgz)       tar xzf $1   ;;
+                        *.zip)       unzip $1     ;;
+                        *.Z)         uncompress $1;;
+                        *.7z)        7z x $1      ;;
+                        *)           echo "'$1' cannot be extracted via ex()" ;;
+                esac
+        else
+                echo "'$1' is not a valid file"
+        fi
+}
+
+export QT_QPA_PLATFORMTHEME=qt5ct
+export GTK_THEME=Breeze-Dark
+export EDITOR=/usr/bin/vim
+export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
+# fix "xdg-open fork-bomb" export your preferred browser from here
+export BROWSER=/usr/bin/qutebrowser
 
 # Bitwarden Data
 export BW_CLIENTID="user.5474947a-59d6-4b15-b406-b046009041c5"
 export BW_CLIENTSECRET="OJrFFCTLxxe7NF6oDs91ki66qacFO9"
-
-export GTK_THEME=Adapta-Nokto-Eta-Maia
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+export BW_SESSION="B/koX52A8LzTUh1rfIvrK2UrtLFV+V2/eYFlOtaLKsEV3ee8K5Jw8eXkiSzyhxEt4/wNl92q9TEpjPPm9bGUQA=="
