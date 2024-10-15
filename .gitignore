@@ -8,8 +8,7 @@
 !/.config/dolphinrc
 !/.config/gtk-2.0
 !/.config/gtk-3.0
-!/.config/i3
-!/.config/i3status
+#!/.config/i3/*
 !/.config/kate
 !/.config/konsolerc
 !/.config/mimeapps.list
@@ -20,8 +19,10 @@
 !/.config/themes
 !/.config/user-dirs.dirs
 !/.config/xfce4
+!/.config/warp-terminal
 
 # KDE configurations
+!/.kde
 !/.local
 /.local/*
 !/.local/share
@@ -29,6 +30,7 @@
 !/.local/share/dolphin
 !/.local/share/kate
 !/.local/share/konsole
+.local/share/kate/anonymous.katesession
 
 # Under home
 !.bashrc
@@ -37,8 +39,24 @@
 !.gtkrc-2.0
 !.profile
 
+!.warp
+
 !.gitignore
 !.installation
+
+# Binaries
+!/.local/bin
+
+# Bitwarden
+!/.bitwarden
+!/.bitwarden/*
+/.bitwarden/*.AppImage
+
+# I3 ignore everything
+/.i3/*
+
+# Ignore cache
+*cache*
 
 #/*
 #!/.config
