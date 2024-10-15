@@ -152,4 +152,4 @@ export BROWSER=/usr/bin/qutebrowser
 # Bitwarden Data
 export BW_CLIENTID="user.5474947a-59d6-4b15-b406-b046009041c5"
 export BW_CLIENTSECRET="OJrFFCTLxxe7NF6oDs91ki66qacFO9"
-export BW_SESSION="B/koX52A8LzTUh1rfIvrK2UrtLFV+V2/eYFlOtaLKsEV3ee8K5Jw8eXkiSzyhxEt4/wNl92q9TEpjPPm9bGUQA=="
+export BW_SESSION="PKBJ8Qf9i3jZw52toZty2wXhzZg53RFOzGKeQBZBBtTQrrsHkVKj31jrAo8BlIxUsYvl5PLQ2OFVnyNQ479Ucw=="
