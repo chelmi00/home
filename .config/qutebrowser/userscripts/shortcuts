@@ -7,9 +7,14 @@ strings=(
     "migfervilesp@gmail.com"
 )
 
+addition=""
+if [ "$1" == "i" ]; then
+    addition="i";
+fi
+
 # Use rofi to display the list of strings and copy the selected string to the clipboard
 selected=$(printf '%s\n' "${strings[@]}" | rofi -dmenu -p "Select a string" -no-custom)
 echo -n "$selected" | xclip -selection clipboard
 
 # Paste the selected string
-echo "i$selected" | xdotool type --clearmodifiers --file -
+echo "$addition$selected" | xdotool type --clearmodifiers --file -

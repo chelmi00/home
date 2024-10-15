@@ -47,26 +47,26 @@ argument_parser = argparse.ArgumentParser(
 )
 argument_parser.add_argument('url', nargs='?', default=os.getenv('QUTE_URL'))
 argument_parser.add_argument('--dmenu-invocation', '-d', default='rofi -dmenu -i -p Bitwarden',
-                             help='Invocation used to execute a dmenu-provider')
+    help='Invocation used to execute a dmenu-provider')
 argument_parser.add_argument('--password-prompt-invocation', '-p', default='rofi -dmenu -p "Master Password" -password -lines 0',
-                             help='Invocation used to prompt the user for their Bitwarden password')
+    help='Invocation used to prompt the user for their Bitwarden password')
 argument_parser.add_argument('--no-insert-mode', '-n', dest='insert_mode', action='store_false',
-                             help="Don't automatically enter insert mode")
+    help="Don't automatically enter insert mode")
 argument_parser.add_argument('--totp', '-t', action='store_true',
-                             help="Copy TOTP key to clipboard")
+    help="Copy TOTP key to clipboard")
 argument_parser.add_argument('--io-encoding', '-i', default='UTF-8',
-                             help='Encoding used to communicate with subprocesses')
+    help='Encoding used to communicate with subprocesses')
 argument_parser.add_argument('--merge-candidates', '-m', action='store_true',
-                             help='Merge pass candidates for fully-qualified and registered domain name')
+    help='Merge pass candidates for fully-qualified and registered domain name')
 argument_parser.add_argument('--auto-lock', type=int, default=900,
-                             help='Automatically lock the vault after this many seconds')
+    help='Automatically lock the vault after this many seconds')
 group = argument_parser.add_mutually_exclusive_group()
 group.add_argument('--username-only', '-e',
-                   action='store_true', help='Only insert username')
+    action='store_true', help='Only insert username')
 group.add_argument('--password-only', '-w',
-                   action='store_true', help='Only insert password')
+    action='store_true', help='Only insert password')
 group.add_argument('--totp-only', '-T',
-                   action='store_true', help='Only insert totp code')
+    action='store_true', help='Only insert totp code')
 
 stderr = functools.partial(print, file=sys.stderr)
 
@@ -86,6 +86,11 @@ def qute_command(command):
         fifo.flush()
 
 
+def send_command_to_qute(command):
+    with open(os.environ.get("QUTE_FIFO"), "w") as f:
+        f.write(command)
+
+
 def ask_password(password_prompt_invocation):
     process = subprocess.run(
         shlex.split(password_prompt_invocation),
@@ -95,10 +100,12 @@ def ask_password(password_prompt_invocation):
     if process.returncode > 0:
         raise Exception('Could not unlock vault')
     master_pass = process.stdout.strip()
-    return subprocess.check_output(
+    process = subprocess.check_output(
         ['bw', 'unlock', '--raw', master_pass],
         text=True,
     ).strip()
+    send_command_to_qute("message-info 'Password accepted'")
+    return process
 
 
 def get_session_key(auto_lock, password_prompt_invocation):
@@ -131,6 +138,7 @@ def get_session_key(auto_lock, password_prompt_invocation):
 
 def pass_(domain, encoding, auto_lock, password_prompt_invocation):
     session_key = get_session_key(auto_lock, password_prompt_invocation)
+    send_command_to_qute("message-info 'Retrieving credentials from Bitwarden'")
     process = subprocess.run(
         ['bw', 'list', 'items', '--session', session_key, '--url', domain],
         capture_output=True,
@@ -185,6 +193,7 @@ def fake_key_raw(text):
 
 
 def main(arguments):
+    send_command_to_qute("message-info 'Process started'")
     if not arguments.url:
         argument_parser.print_help()
         return ExitCodes.FAILURE
@@ -230,9 +239,7 @@ def main(arguments):
         choice_name = choice_tokens[0].strip()
         choice_username = choice_tokens[1].strip()
         selection = next((c for (i, c) in enumerate(candidates)
-                          if c['name'] == choice_name
-                          and c['login']['username'] == choice_username),
-                         None)
+            if c['name'] == choice_name and c['login']['username'] == choice_username), None)
 
     # Nothing was selected, simply return
     if not selection:
