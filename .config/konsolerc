@@ -1,14 +1,8 @@
-1600x900 screen: Height=852
-1600x900 screen: Width=1596
-1600x900 screen: XPosition=2
-1600x900 screen: YPosition=22
-1920x1080 screen: Height=1053
-1920x1080 screen: Width=1920
-1920x1080 screen: XPosition=0
-1920x1080 screen: YPosition=0
-MenuBar=Disabled
-State=AAAA/wAAAAD9AAAAAQAAAAAAAAAAAAAAAPwCAAAAAvsAAAAiAFEAdQBpAGMAawBDAG8AbQBtAGEAbgBkAHMARABvAGMAawAAAAAA/////wAAAXoA////+wAAABwAUwBTAEgATQBhAG4AYQBnAGUAcgBEAG8AYwBrAAAAAAD/////AAABEAD///8AAAeAAAAD6wAAAAQAAAAEAAAACAAAAAj8AAAAAQAAAAIAAAACAAAAFgBtAGEAaQBuAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAAAAAAAAAABwAcwBlAHMAcwBpAG8AbgBUAG8AbwBsAGIAYQByAQAAAO0AAAaLAAAAAAAAAAA=
-eDP-1=eDP-1
+State=AAAA/wAAAAD9AAAAAQAAAAAAAAAAAAAAAPwCAAAAAfsAAAAcAFMAUwBIAE0AYQBuAGEAZwBlAHIARABvAGMAawAAAAAA/////wAAAKYA////AAACrAAAApYAAAAEAAAABAAAAAgAAAAI/AAAAAEAAAACAAAAAgAAABYAbQBhAGkAbgBUAG8AbwBsAEIAYQByAQAAAAD/////AAAAAAAAAAAAAAAcAHMAZQBzAHMAaQBvAG4AVABvAG8AbABiAGEAcgAAAAFY/////wAAAAAAAAAA
+eDP-1 Height 1368x768=719
+eDP-1 Width 1368x768=684
+eDP-1 XPosition 1368x768=342
+eDP-1 YPosition 1368x768=49
 
 [Desktop Entry]
 DefaultProfile=chelmi.profile
@@ -16,28 +10,43 @@ DefaultProfile=chelmi.profile
 [General]
 ConfigVersion=1
 
+[KFileDialog Settings]
+Recent Files[$e]=file:$HOME/Downloads/chelmi_konsole.shortcuts,file:$HOME/Downloads/chelmi_konsole.shortcuts
+Recent URLs[$e]=file:$HOME/Downloads/
+detailViewIconSize=16
+
 [MainWindow]
-1536x864 screen: Height=524
-1536x864 screen: Width=911
-1600x900 screen: Height=847
-1600x900 screen: Width=779
-1600x900 screen: XPosition=13
-1600x900 screen: YPosition=13
-1920x1080 screen: Height=1053
-1920x1080 screen: Width=1920
-1920x1080 screen: XPosition=0
-1920x1080 screen: YPosition=0
-MenuBar=Disabled
-RestorePositionForNextInstance=false
+1600x900 screen: Height=852
+1600x900 screen: Width=1600
+1600x900 screen: Window-Maximized=true
+1600x900 screen: XPosition=0
+1600x900 screen: YPosition=48
+MenuBar=Enabled
 ToolBarsMovable=Disabled
 eDP-1=eDP-1
+eDP-1 Height 1368x768=719
+eDP-1 Height 1440x810=755
+eDP-1 Height 1600x900=900
+eDP-1 Height 1920x1080=1052
+eDP-1 Width 1368x768=684
+eDP-1 Width 1440x810=1436
+eDP-1 Width 1600x900=1600
+eDP-1 Width 1920x1080=1916
+eDP-1 Window-Maximized 1368x768=true
+eDP-1 Window-Maximized 1600x900=true
+eDP-1 XPosition 1368x768=342
+eDP-1 XPosition 1440x810=2
+eDP-1 XPosition 1600x900=0
+eDP-1 XPosition 1920x1080=2
+eDP-1 YPosition 1368x768=49
+eDP-1 YPosition 1440x810=26
+eDP-1 YPosition 1600x900=0
+eDP-1 YPosition 1920x1080=26
 
-[Shortcut Schemes]
-Current Scheme=Default
-
-[Shortcuts]
-mainToolBar=none
-sessionToolbar=none
+[TabBar]
+NewTabButton=true
+TabBarPosition=Top
+TabBarVisibility=AlwaysShowTabBar
 
 [UiSettings]
-ColorScheme=
+ColorScheme=KvantumAlt
