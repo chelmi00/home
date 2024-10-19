@@ -141,9 +141,44 @@ aex () {
                 echo "'$1' is not a valid file"
         fi
 }
+# acompress f1 f2 f3 ...
+acompress () {
+    echo "Choose a compression method:"
+    echo "1) tar.bz2"
+    echo "2) tar.gz"
+    echo "3) bz2"
+    echo "4) rar"
+    echo "5) gz"
+    echo "6) tar"
+    echo "7) tbz2"
+    echo "8) tgz"
+    echo "9) zip"
+    echo "10) 7z"
+    read -p "Method: " method
+
+	# Generar un nombre de archivo aleatorio
+	timestamp=$(date +%H:%M:%S.%d-%m-%Y)
+
+    case $method in
+        1) extension="tar.bz2"; tar cjf ${timestamp}.${extension} "$@" ;;
+        2) extension="tar.gz"; tar czf ${timestamp}.${extension} "$@" ;;
+        3) extension="bz2"; for file in "$@"; do bzip2 -k -c "$file" > "${timestamp}_${file}.${extension}"; done ;;
+        4) extension="rar"; rar a ${timestamp}.${extension} "$@" ;;
+        5) extension="gz"; for file in "$@"; do gzip -c "$file" > "${timestamp}_${file}.${extension}"; done ;;
+        6) extension="tar"; tar cf ${timestamp}.${extension} "$@" ;;
+        7) extension="tbz2"; tar cjf ${timestamp}.${extension} "$@" ;;
+        8) extension="tgz"; tar czf ${timestamp}.${extension} "$@" ;;
+        9) extension="zip"; zip ${timestamp}.${extension} "$@" ;;
+        10) extension="7z"; 7z a ${timestamp}.${extension} "$@" ;;
+        *) echo "Not a valid compression method"; exit 1 ;;
+    esac
+
+    echo "File compressed: ${timestamp}.${extension}"
+}
 
 export QT_QPA_PLATFORMTHEME=qt5ct
-export GTK_THEME=Breeze-Dark
+export GTK_THEME=Papirus-Dark-Maia
+export XDG_MENU_PREFIX=plasma-
 export EDITOR=/usr/bin/vim
 export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
 # fix "xdg-open fork-bomb" export your preferred browser from here
